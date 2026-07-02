@@ -1,0 +1,208 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.commons:commons-lang3 >------------------
+[INFO] Building Apache Commons Lang 3.20.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---
+[INFO] Deleting D:\SWT\commons-lang3-3.20.0-src\target
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-lang3 ---
+[WARNING]  Parameter 'excludes' is deprecated: Deprecated for removal since 0.17: Use <inputExclude> instead.
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-lang3 ---
+[INFO] No known issue in 22 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-lang3 ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (javadoc.resources) @ commons-lang3 ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to D:\SWT\commons-lang3-3.20.0-src\target\apidocs\META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-lang3 ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ commons-lang3 ---
+[INFO] Executing: cmd.exe /X /C "git log -1 --no-merges "--format=format:%H %aI %aE %aN""
+[INFO] Working directory: D:\SWT\commons-lang3-3.20.0-src
+[WARNING] Cannot get the revision information from the scm repository, proceeding with revision of ?????? : 
+Exception while executing SCM command.
+[INFO] Storing buildNumber: ?????? at timestamp: 1782569522597
+[INFO] Executing: cmd.exe /X /C "git symbolic-ref HEAD"
+[INFO] Working directory: D:\SWT\commons-lang3-3.20.0-src
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: 'git' is not recognized as an internal or external command,
+operable program or batch file.
+
+[INFO] Executing: cmd.exe /X /C "git log -1 --no-merges "--format=format:%H %aI %aE %aN""
+[INFO] Working directory: D:\SWT\commons-lang3-3.20.0-src
+[WARNING] Cannot get the branch information from the scm repository, proceeding with UNKNOWN_BRANCH : 
+Exception while executing SCM command.
+[INFO] Storing scmBranch: UNKNOWN_BRANCH
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ commons-lang3 ---
+[INFO] skip non existing resourceDirectory D:\SWT\commons-lang3-3.20.0-src\src\main\resources
+[INFO] Copying 2 resources from  to target\classes\META-INF
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ commons-lang3 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 259 source files with javac [debug target 1.8] to target\classes
+[WARNING] /D:/SWT/commons-lang3-3.20.0-src/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java:[361,33] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.Object for a varargs call
+  cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java: Some input files use or override a deprecated API.
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java: Recompile with -Xlint:deprecation for details.
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/main/java/org/apache/commons/lang3/AppendableJoiner.java: Some input files use unchecked or unsafe operations.
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/main/java/org/apache/commons/lang3/AppendableJoiner.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-lang3 ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: D:\SWT\commons-lang3-3.20.0-src\target\osgi\MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ commons-lang3 ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] Copying 2 resources from  to target\test-classes\META-INF
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ commons-lang3 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 268 source files with javac [debug target 1.8] to target\test-classes
+[WARNING] /D:/SWT/commons-lang3-3.20.0-src/src/test/java/org/apache/commons/lang3/builder/ReflectionDiffBuilderTest.java:[172,52] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.String for a varargs call
+  cast to java.lang.String[] for a non-varargs call and to suppress this warning
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/test/java/org/apache/commons/lang3/AppendableJoinerTest.java: Some input files use or override a deprecated API.
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/test/java/org/apache/commons/lang3/AppendableJoinerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /D:/SWT/commons-lang3-3.20.0-src/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- pitest:1.9.0:mutationCoverage (default-cli) @ commons-lang3 ---
+[INFO] Root dir is : D:\SWT\commons-lang3-3.20.0-src
+[INFO] Found plugin : Default csv report plugin
+[INFO] Found plugin : Default xml report plugin
+[INFO] Found plugin : Default html report plugin
+[INFO] Found plugin : Implicit null check filter
+[INFO] Found plugin : Kotlin junk mutations filter
+[INFO] Found plugin : Infinite for loop filter
+[INFO] Found plugin : Max mutations per class limit
+[INFO] Found plugin : Logging calls filter
+[INFO] Found plugin : Assertions filter
+[INFO] Found plugin : Method reference null check filter
+[INFO] Found plugin : Try with resources filter
+[INFO] Found plugin : Enum constructor filter
+[INFO] Found plugin : Trivial return vals equivalence filter
+[INFO] Found plugin : Long running iterator loop filter
+[INFO] Found plugin : Inlined finally block filter plugin
+[INFO] Found plugin : Record junk mutation filter
+[INFO] Found plugin : String switch filter
+[INFO] Found plugin : Excluded annotations plugin
+[INFO] Found plugin : Equals shortcut equivalent mutant filter
+[INFO] Found plugin : Static initializer code detector plugin
+[INFO] Found plugin : Mutant export plugin
+[INFO] Found plugin : Enum switch filter
+[INFO] Found plugin : For each loop filter
+[INFO] Found plugin : For loop counter filter
+[INFO] Plugin available : Git integration
+[INFO] Plugin available : Support for mutating kotlin bytecode
+[INFO] Found shared classpath plugin : Default mutation engine
+[INFO] Found shared classpath plugin : JUnit 5 test framework support
+[INFO] Found shared classpath plugin : JUnit plugin
+[INFO] Available mutators : EXPERIMENTAL_ARGUMENT_PROPAGATION,FALSE_RETURNS,TRUE_RETURNS,CONDITIONALS_BOUNDARY,CONSTRUCTOR_CALLS,EMPTY_RETURNS,INCREMENTS,INLINE_CONSTS,INVERT_NEGS,MATH,NEGATE_CONDITIONALS,NON_VOID_METHOD_CALLS,NULL_RETURNS,PRIMITIVE_RETURNS,REMOVE_CONDITIONALS_EQUAL_IF,REMOVE_CONDITIONALS_EQUAL_ELSE,REMOVE_CONDITIONALS_ORDER_IF,REMOVE_CONDITIONALS_ORDER_ELSE,RETURN_VALS,VOID_METHOD_CALLS,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER,EXPERIMENTAL_MEMBER_VARIABLE,EXPERIMENTAL_NAKED_RECEIVER,REMOVE_INCREMENTS,EXPERIMENTAL_RETURN_VALUES_MUTATOR,EXPERIMENTAL_SWITCH,EXPERIMENTAL_BIG_DECIMAL,EXPERIMENTAL_BIG_INTEGER
+[INFO] Adding org.pitest:pitest-junit5-plugin to SUT classpath
+[INFO] Adding org.pitest:pitest to SUT classpath
+[INFO] Mutating from D:\SWT\commons-lang3-3.20.0-src\target\classes
+/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 52 Killed 51 (98%)
+> KILLED 51 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 68 Killed 34 (50%)
+> KILLED 34 SURVIVED 34 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 6 Killed 6 (100%)
+> KILLED 6 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 13 Killed 3 (23%)
+> KILLED 3 SURVIVED 10 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 28 Killed 24 (86%)
+> KILLED 24 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 4 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 29 Killed 29 (100%)
+> KILLED 29 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 26 Killed 21 (81%)
+> KILLED 21 SURVIVED 5 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 9 Killed 9 (100%)
+> KILLED 9 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 12 Killed 12 (100%)
+> KILLED 12 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator
+>> Generated 184 Killed 176 (96%)
+> KILLED 176 SURVIVED 6 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 20 seconds
+--------------------------------------------------------------------------------
+> Total  : 21 seconds
+--------------------------------------------------------------------------------
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage: 417/423 (99%)
+>> Generated 427 mutations Killed 365 (85%)
+>> Mutations with no coverage 7. Test strength 87%
+>> Ran 796 tests (1.86 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  40.854 s
+[INFO] Finished at: 2026-06-27T21:12:39+07:00
+[INFO] ------------------------------------------------------------------------

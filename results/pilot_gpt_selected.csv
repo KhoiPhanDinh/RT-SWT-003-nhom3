@@ -1,0 +1,388 @@
+mutant_id,project,version,class_name,method_name,line_number,mutation_operator,original_code,mutated_code,surrounding_context,usefulness_score,short_reason,api_status,checkpoint_status,timestamp,model,prompt_tokens,completion_tokens,total_tokens,estimated_cost_usd,latency_seconds,rank,selection_strategy,selected_by
+MUT_0140,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,getMantissa,,EmptyObjectReturnValsMutator,"return hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos);","// PIT Mutated: replaced return value with """" for org/apache/commons/lang3/math/NumberUtils::getMantissa
+return hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos);","        if (length <= (hasSign ? 1 : 0) || length < stopPos) {
+            throw new NumberFormatException(str + "" is not a valid number."");
+        }
+        return hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos);
+    }
+
+    /**
+",5,"Significant change in return value, likely to affect output.",success,done,2026-06-27T22:19:50,gpt-4o-mini,2495,415,2910,0.0,7.174,1,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0263,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,max,,PrimitiveReturnsMutator,return a;,"// PIT Mutated: replaced int return with 0 for org/apache/commons/lang3/math/NumberUtils::max
+return a;","        if (c > a) {
+            a = c;
+        }
+        return a;
+    }
+
+    /**
+",5,"Replaces return value, likely to reveal test weaknesses.",success,done,2026-06-27T22:21:40,gpt-4o-mini,1890,412,2302,0.0,8.437,2,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0268,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,max,,PrimitiveReturnsMutator,return a;,"// PIT Mutated: replaced long return with 0 for org/apache/commons/lang3/math/NumberUtils::max
+return a;","        if (c > a) {
+            a = c;
+        }
+        return a;
+    }
+
+    /**
+",5,"Replaces return value, likely to reveal test weaknesses.",success,done,2026-06-27T22:21:40,gpt-4o-mini,1890,412,2302,0.0,8.437,3,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0278,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static byte max(final byte... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns max
+        byte max = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,Removing validation could lead to significant failures.,success,done,2026-06-27T22:21:48,gpt-4o-mini,2027,425,2452,0.0,14.241,4,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0285,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static double max(final double... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns max
+        double max = array[0];
+        for (int j = 1; j < array.length; j++) {
+",5,"Removes validation, likely to expose test weaknesses.",success,done,2026-06-27T22:22:02,gpt-4o-mini,2073,409,2482,0.0,8.91,5,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0293,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static float max(final float... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns max
+        float max = array[0];
+        for (int j = 1; j < array.length; j++) {
+",5,"Removes validation, likely to expose flaws in input handling.",success,done,2026-06-27T22:22:11,gpt-4o-mini,2111,430,2541,0.0,9.917,6,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0300,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static int max(final int... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns max
+        int max = array[0];
+        for (int j = 1; j < array.length; j++) {
+",5,"Removes validation, likely to expose flaws in input handling.",success,done,2026-06-27T22:22:11,gpt-4o-mini,2111,430,2541,0.0,9.917,7,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0306,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static long max(final long... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns max
+        long max = array[0];
+        for (int j = 1; j < array.length; j++) {
+",5,Removing validation can lead to significant errors.,success,done,2026-06-27T22:22:21,gpt-4o-mini,2069,406,2475,0.0,7.404,8,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0312,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static short max(final short... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns max
+        short max = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,Removing validation can expose flaws in input handling.,success,done,2026-06-27T22:22:29,gpt-4o-mini,2022,437,2459,0.0,11.614,9,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0340,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static byte min(final byte... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        byte min = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,"Removes validation, likely to expose flaws in input handling.",success,done,2026-06-27T22:22:49,gpt-4o-mini,2013,428,2441,0.0,8.318,10,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0347,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static double min(final double... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        double min = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,Removing validation could expose critical flaws in tests.,success,done,2026-06-27T22:22:57,gpt-4o-mini,2055,419,2474,0.0,8.337,11,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0355,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static float min(final float... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        float min = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,"Removes validation, likely to expose test weaknesses.",success,done,2026-06-27T22:23:05,gpt-4o-mini,2086,409,2495,0.0,9.47,12,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0362,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static int min(final int... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        int min = array[0];
+        for (int j = 1; j < array.length; j++) {
+",5,Removing validation can expose flaws in test coverage.,success,done,2026-06-27T22:23:15,gpt-4o-mini,2061,428,2489,0.0,8.203,13,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0368,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static long min(final long... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        long min = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,Removing validation can expose flaws in test coverage.,success,done,2026-06-27T22:23:15,gpt-4o-mini,2061,428,2489,0.0,8.203,14,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0374,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static short min(final short... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        short min = array[0];
+        for (int i = 1; i < array.length; i++) {
+",5,"Removes validation, likely to expose test weaknesses.",success,done,2026-06-27T22:23:23,gpt-4o-mini,2063,405,2468,0.0,8.676,15,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0007,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createBigDecimal,,NullReturnValsMutator,return new BigDecimal(str);,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createBigDecimal
+return new BigDecimal(str);","        if (StringUtils.isBlank(str)) {
+            throw new NumberFormatException(""A blank string is not a valid number"");
+        }
+        return new BigDecimal(str);
+    }
+
+    /**
+",4,Null return value could expose null handling issues.,success,done,2026-06-27T22:17:53,gpt-4o-mini,2163,401,2564,0.0,10.02,16,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0012,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,"} else if (str.startsWith(""0"", pos) && str.length() > pos + 1) { // octal; so long as there are additional digits","// PIT Mutated: Replaced integer addition with subtraction
+} else if (str.startsWith(""""0"""", pos) && str.length() > pos + 1) { // octal; so long as there are additional digits","        } else if (str.startsWith(""#"", pos)) { // alternative hex (allowed by Long/Integer)
+            radix = 16;
+            pos++;
+        } else if (str.startsWith(""0"", pos) && str.length() > pos + 1) { // octal; so long as there are additional digits
+            radix = 8;
+            pos++;
+        } // default is to treat as decimal
+",4,Changing addition to subtraction can affect flow.,success,done,2026-06-27T22:18:03,gpt-4o-mini,2450,402,2852,0.0,8.873,17,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0023,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createBigInteger,,NullReturnValsMutator,return negate ? value.negate() : value;,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createBigInteger
+return negate ? value.negate() : value;","            pos++;
+        } // default is to treat as decimal
+        final BigInteger value = new BigInteger(str.substring(pos), radix);
+        return negate ? value.negate() : value;
+    }
+
+    /**
+",4,Null return could expose handling of null values.,success,done,2026-06-27T22:18:12,gpt-4o-mini,2094,414,2508,0.0,6.794,18,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0053,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,pfxLen += pfx.length() + offset;,"// PIT Mutated: Replaced integer addition with subtraction
+pfxLen += pfx.length() + offset;","        int pfxLen = 0;
+        for (final String pfx : hexPrefixes) {
+            if (str.startsWith(pfx, offset)) {
+                pfxLen += pfx.length() + offset;
+                break;
+            }
+        }
+",4,Significant change in arithmetic operation.,success,done,2026-06-27T22:18:41,gpt-4o-mini,2362,393,2755,0.0,11.949,19,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0054,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,pfxLen += pfx.length() + offset;,"// PIT Mutated: Replaced integer addition with subtraction
+pfxLen += pfx.length() + offset;","        int pfxLen = 0;
+        for (final String pfx : hexPrefixes) {
+            if (str.startsWith(pfx, offset)) {
+                pfxLen += pfx.length() + offset;
+                break;
+            }
+        }
+",4,"Similar to MUT_0053, but redundant.",success,done,2026-06-27T22:18:41,gpt-4o-mini,2362,393,2755,0.0,11.949,20,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0055,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,final int hexDigits = length - pfxLen;,"// PIT Mutated: Replaced integer subtraction with addition
+final int hexDigits = length - pfxLen;","                }
+                pfxLen++;
+            }
+            final int hexDigits = length - pfxLen;
+            if (hexDigits > 16 || hexDigits == 16 && firstSigDigit > '7') { // too many for Long
+                return createBigInteger(str);
+            }
+",4,Alters critical calculation affecting flow.,success,done,2026-06-27T22:18:41,gpt-4o-mini,2362,393,2755,0.0,11.949,21,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0059,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,"dec = str.substring(decPos + 1, expPos);","// PIT Mutated: Replaced integer addition with subtraction
+dec = str.substring(decPos + 1, expPos);","                if (expPos <= decPos || expPos > length) { // prevents double exponent causing IOOBE
+                    throw new NumberFormatException(str + "" is not a valid number."");
+                }
+                dec = str.substring(decPos + 1, expPos);
+            } else {
+                // No exponent, but there may be a type character to remove
+                dec = str.substring(decPos + 1, requestType ? length - 1 : length);
+",4,Critical substring operation change.,success,done,2026-06-27T22:18:41,gpt-4o-mini,2362,393,2755,0.0,11.949,22,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0060,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,"dec = str.substring(decPos + 1, requestType ? length - 1 : length);","// PIT Mutated: Replaced integer addition with subtraction
+dec = str.substring(decPos + 1, requestType ? length - 1 : length);","                dec = str.substring(decPos + 1, expPos);
+            } else {
+                // No exponent, but there may be a type character to remove
+                dec = str.substring(decPos + 1, requestType ? length - 1 : length);
+            }
+            mant = getMantissa(str, decPos);
+        } else {
+",4,"Alters substring logic, potentially impactful.",success,done,2026-06-27T22:18:41,gpt-4o-mini,2362,393,2755,0.0,11.949,23,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0069,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (str == null) {,"// PIT Mutated: negated conditional
+if (str == null) {","     * @throws NumberFormatException if the value cannot be converted.
+     */
+    public static Number createNumber(final String str) {
+        if (str == null) {
+            return null;
+        }
+        if (StringUtils.isBlank(str)) {
+",4,Negated conditionals can reveal test suite weaknesses.,success,done,2026-06-27T22:18:53,gpt-4o-mini,2205,418,2623,0.0,8.063,24,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0070,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (StringUtils.isBlank(str)) {,"// PIT Mutated: negated conditional
+if (StringUtils.isBlank(str)) {","        if (str == null) {
+            return null;
+        }
+        if (StringUtils.isBlank(str)) {
+            throw new NumberFormatException(""A blank string is not a valid number"");
+        }
+        // Need to deal with all possible hex prefixes here
+",4,Negated conditionals can reveal test suite weaknesses.,success,done,2026-06-27T22:18:53,gpt-4o-mini,2205,418,2623,0.0,8.063,25,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0079,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int,"// PIT Mutated: negated conditional
+if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int","            if (hexDigits > 16 || hexDigits == 16 && firstSigDigit > '7') { // too many for Long
+                return createBigInteger(str);
+            }
+            if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                return createLong(str);
+            }
+            return createInteger(str);
+",4,Negation of a conditional that could reveal weaknesses.,success,done,2026-06-27T22:19:01,gpt-4o-mini,2546,427,2973,0.0,9.53,26,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0080,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int,"// PIT Mutated: negated conditional
+if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int","            if (hexDigits > 16 || hexDigits == 16 && firstSigDigit > '7') { // too many for Long
+                return createBigInteger(str);
+            }
+            if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                return createLong(str);
+            }
+            return createInteger(str);
+",4,Negation of a conditional that could reveal weaknesses.,success,done,2026-06-27T22:19:01,gpt-4o-mini,2546,427,2973,0.0,9.53,27,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0119,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return createBigInteger(str);,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return createBigInteger(str);","            }
+            final int hexDigits = length - pfxLen;
+            if (hexDigits > 16 || hexDigits == 16 && firstSigDigit > '7') { // too many for Long
+                return createBigInteger(str);
+            }
+            if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                return createLong(str);
+",4,"Introduces null return, likely to reveal test weaknesses.",success,done,2026-06-27T22:19:35,gpt-4o-mini,2827,408,3235,0.0,7.734,28,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0120,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return createLong(str);,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return createLong(str);","                return createBigInteger(str);
+            }
+            if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                return createLong(str);
+            }
+            return createInteger(str);
+        }
+",4,"Introduces null return, likely to reveal test weaknesses.",success,done,2026-06-27T22:19:35,gpt-4o-mini,2827,408,3235,0.0,7.734,29,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0124,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return f;,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return f;","                    if (!(f.isInfinite() || f.floatValue() == 0.0F && !isZero(mant, dec))) {
+                        // If it's too big for a float or the float value = 0 and the string
+                        // has non-zeros in it, then float does not have the precision we want
+                        return f;
+                    }
+                } catch (final NumberFormatException ignored) {
+                    // ignore the bad number
+",4,Return value is critical for float precision checks.,success,done,2026-06-27T22:19:42,gpt-4o-mini,2243,404,2647,0.0,7.758,30,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0125,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return d;,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return d;","                try {
+                    final Double d = createDouble(str);
+                    if (!(d.isInfinite() || d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+                        return d;
+                    }
+                } catch (final NumberFormatException ignored) {
+                    // ignore the bad number
+",4,Null return affects double precision checks.,success,done,2026-06-27T22:19:42,gpt-4o-mini,2243,404,2647,0.0,7.758,31,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0126,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return createBigDecimal(numeric);,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return createBigDecimal(numeric);","                    // ignore the bad number
+                }
+                try {
+                    return createBigDecimal(numeric);
+                } catch (final NumberFormatException ignored) {
+                    // ignore the bad number
+                }
+",4,Critical for handling BigDecimal conversions.,success,done,2026-06-27T22:19:42,gpt-4o-mini,2243,404,2647,0.0,7.758,32,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0130,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return f;,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return f;","            final Float f = createFloat(str);
+            final Double d = createDouble(str);
+            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {
+                return f;
+            }
+            if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+                final BigDecimal b = createBigDecimal(str);
+",4,Null return impacts float and double comparisons.,success,done,2026-06-27T22:19:42,gpt-4o-mini,2243,404,2647,0.0,7.758,33,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0134,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (length <= (hasSign ? 1 : 0) || length < stopPos) {,"// PIT Mutated: changed conditional boundary
+if (length <= (hasSign ? 1 : 0) || length < stopPos) {","        final char firstChar = str.charAt(0);
+        final boolean hasSign = isSign(firstChar);
+        final int length = str.length();
+        if (length <= (hasSign ? 1 : 0) || length < stopPos) {
+            throw new NumberFormatException(str + "" is not a valid number."");
+        }
+        return hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos);
+",4,"Changes conditional boundary, likely to affect logic.",success,done,2026-06-27T22:19:50,gpt-4o-mini,2495,415,2910,0.0,7.174,34,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0135,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (length <= (hasSign ? 1 : 0) || length < stopPos) {,"// PIT Mutated: changed conditional boundary
+if (length <= (hasSign ? 1 : 0) || length < stopPos) {","        final char firstChar = str.charAt(0);
+        final boolean hasSign = isSign(firstChar);
+        final int length = str.length();
+        if (length <= (hasSign ? 1 : 0) || length < stopPos) {
+            throw new NumberFormatException(str + "" is not a valid number."");
+        }
+        return hasSign ? str.substring(1, stopPos) : str.substring(0, stopPos);
+",4,"Changes conditional boundary, likely to affect logic.",success,done,2026-06-27T22:19:50,gpt-4o-mini,2495,415,2910,0.0,7.174,35,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0143,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (str == null) {,"// PIT Mutated: negated conditional
+if (str == null) {","     * @return if it is all zeros or {@code null}.
+     */
+    private static boolean isAllZeros(final String str) {
+        if (str == null) {
+            return true;
+        }
+        for (int i = str.length() - 1; i >= 0; i--) {
+",4,Negating conditionals can reveal weaknesses in test cases.,success,done,2026-06-27T22:19:57,gpt-4o-mini,2247,414,2661,0.0,8.265,36,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0155,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,IncrementsMutator,"sz--; // don't want to loop to the last char, check it afterwards","// PIT Mutated: Changed increment from -1 to 1
+sz--; // don't want to loop to the last char, check it afterwards","                return true;
+            }
+        }
+        sz--; // don't want to loop to the last char, check it afterwards
+              // for type qualifiers
+        int i = start;
+        // loop to the next to last char or to the last char if we need another digit to
+",4,"Significant change in loop behavior, likely to reveal weaknesses.",success,done,2026-06-27T22:20:06,gpt-4o-mini,2633,421,3054,0.0,11.01,37,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0209,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanFalseReturnValsMutator,return true;,"// PIT Mutated: replaced boolean return with false for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return true;","                        return false;
+                    }
+                }
+                return true;
+            }
+            if (Character.isDigit(chars[start + 1])) {
+                // leading 0, but not hex, must be octal
+",4,"Changes return value from true to false, likely to reveal weaknesses.",success,done,2026-06-27T22:20:49,gpt-4o-mini,2257,434,2691,0.0,8.727,38,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0210,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanFalseReturnValsMutator,return true;,"// PIT Mutated: replaced boolean return with false for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return true;","                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        sz--; // don't want to loop to the last char, check it afterwards
+",4,"Changes return value from true to false, likely to reveal weaknesses.",success,done,2026-06-27T22:20:49,gpt-4o-mini,2257,434,2691,0.0,8.727,39,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0214,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanTrueReturnValsMutator,return false;,"// PIT Mutated: replaced boolean return with true for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return false;","     */
+    public static boolean isCreatable(final String str) {
+        if (StringUtils.isEmpty(str)) {
+            return false;
+        }
+        final char[] chars = str.toCharArray();
+        int sz = chars.length;
+",4,"Changes return value significantly, likely to reveal test weaknesses.",success,done,2026-06-27T22:20:58,gpt-4o-mini,2191,434,2625,0.0,10.889,40,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0215,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanTrueReturnValsMutator,"return false; // str == ""0x""","// PIT Mutated: replaced boolean return with true for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return false; // str == """"0x""""","            if (chars[start + 1] == 'x' || chars[start + 1] == 'X') { // leading 0x/0X
+                int i = start + 2;
+                if (i == sz) {
+                    return false; // str == ""0x""
+                }
+                // checking hex (it can't be anything else)
+                for (; i < chars.length; i++) {
+",4,"Significant change in return value, could expose flaws in tests.",success,done,2026-06-27T22:20:58,gpt-4o-mini,2191,434,2625,0.0,10.889,41,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0216,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanTrueReturnValsMutator,return false;,"// PIT Mutated: replaced boolean return with true for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return false;","                // checking hex (it can't be anything else)
+                for (; i < chars.length; i++) {
+                    if (!CharUtils.isHex(chars[i])) {
+                        return false;
+                    }
+                }
+                return true;
+",4,"Alters return value, likely to test suite effectiveness.",success,done,2026-06-27T22:20:58,gpt-4o-mini,2191,434,2625,0.0,10.889,42,gpt4o_mini_top_percent,gpt4o_mini
+MUT_0217,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanTrueReturnValsMutator,return false;,"// PIT Mutated: replaced boolean return with true for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return false;","                int i = start + 1;
+                for (; i < chars.length; i++) {
+                    if (!CharUtils.isOctal(chars[i])) {
+                        return false;
+                    }
+                }
+                return true;
+",4,"Significant mutation, likely to reveal test suite weaknesses.",success,done,2026-06-27T22:20:58,gpt-4o-mini,2191,434,2625,0.0,10.889,43,gpt4o_mini_top_percent,gpt4o_mini

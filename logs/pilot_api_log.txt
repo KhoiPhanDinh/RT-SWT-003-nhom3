@@ -1,0 +1,2823 @@
+================================================================================
+timestamp: 2026-06-27T22:17:53
+model: gpt-4o-mini
+batch_index: 0
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0001', 'MUT_0002', 'MUT_0003', 'MUT_0004', 'MUT_0005', 'MUT_0006', 'MUT_0007', 'MUT_0008', 'MUT_0009', 'MUT_0010']
+prompt_tokens: 2163
+completion_tokens: 401
+total_tokens: 2564
+estimated_cost_usd: 0.0
+latency_seconds: 10.02
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0001",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation; no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0002",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation; no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0003",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation; no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0004",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation; no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0005",
+    "usefulness_score": 3,
+    "short_reason": "Negated conditional may reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0006",
+    "usefulness_score": 3,
+    "short_reason": "Negated conditional may reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0007",
+    "usefulness_score": 4,
+    "short_reason": "Null return value could expose null handling issues."
+  },
+  {
+    "mutant_id": "MUT_0008",
+    "usefulness_score": 2,
+    "short_reason": "Boundary condition change may not be significant."
+  },
+  {
+    "mutant_id": "MUT_0009",
+    "usefulness_score": 3,
+    "short_reason": "Increment change could affect loop behavior."
+  },
+  {
+    "mutant_id": "MUT_0010",
+    "usefulness_score": 3,
+    "short_reason": "Increment change could affect loop behavior."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:18:03
+model: gpt-4o-mini
+batch_index: 1
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0011', 'MUT_0012', 'MUT_0013', 'MUT_0014', 'MUT_0015', 'MUT_0016', 'MUT_0017', 'MUT_0018', 'MUT_0019', 'MUT_0020']
+prompt_tokens: 2450
+completion_tokens: 402
+total_tokens: 2852
+estimated_cost_usd: 0.0
+latency_seconds: 8.873
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0011",
+    "usefulness_score": 3,
+    "short_reason": "Increment mutation may not significantly affect logic."
+  },
+  {
+    "mutant_id": "MUT_0012",
+    "usefulness_score": 4,
+    "short_reason": "Changing addition to subtraction can affect flow."
+  },
+  {
+    "mutant_id": "MUT_0013",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0014",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0015",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0016",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0017",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0018",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0019",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0020",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditional is equivalent to original."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:18:12
+model: gpt-4o-mini
+batch_index: 2
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0021', 'MUT_0022', 'MUT_0023', 'MUT_0024', 'MUT_0025', 'MUT_0026', 'MUT_0027', 'MUT_0028', 'MUT_0029', 'MUT_0030']
+prompt_tokens: 2094
+completion_tokens: 414
+total_tokens: 2508
+estimated_cost_usd: 0.0
+latency_seconds: 6.794
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0021",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a condition that may not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0022",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0023",
+    "usefulness_score": 4,
+    "short_reason": "Null return could expose handling of null values."
+  },
+  {
+    "mutant_id": "MUT_0024",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0025",
+    "usefulness_score": 3,
+    "short_reason": "Replacing return value with 0 may reveal assumptions in tests."
+  },
+  {
+    "mutant_id": "MUT_0026",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0027",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0028",
+    "usefulness_score": 3,
+    "short_reason": "Replacing return value with 0 may reveal assumptions in tests."
+  },
+  {
+    "mutant_id": "MUT_0029",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0030",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; trivial mutation."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:18:19
+model: gpt-4o-mini
+batch_index: 3
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0031', 'MUT_0032', 'MUT_0033', 'MUT_0034', 'MUT_0035', 'MUT_0036', 'MUT_0037', 'MUT_0038', 'MUT_0039', 'MUT_0040']
+prompt_tokens: 2288
+completion_tokens: 402
+total_tokens: 2690
+estimated_cost_usd: 0.0
+latency_seconds: 12.756
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0031",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0032",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0033",
+    "usefulness_score": 3,
+    "short_reason": "Negated conditionals may reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0034",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0035",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0036",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change may expose flaws."
+  },
+  {
+    "mutant_id": "MUT_0037",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change may expose flaws."
+  },
+  {
+    "mutant_id": "MUT_0038",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change may expose flaws."
+  },
+  {
+    "mutant_id": "MUT_0039",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change may expose flaws."
+  },
+  {
+    "mutant_id": "MUT_0040",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change may expose flaws."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:18:32
+model: gpt-4o-mini
+batch_index: 4
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0041', 'MUT_0042', 'MUT_0043', 'MUT_0044', 'MUT_0045', 'MUT_0046', 'MUT_0047', 'MUT_0048', 'MUT_0049', 'MUT_0050']
+prompt_tokens: 2518
+completion_tokens: 412
+total_tokens: 2930
+estimated_cost_usd: 0.0
+latency_seconds: 9.283
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0041",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0042",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0043",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0044",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0045",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0046",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0047",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0048",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0049",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0050",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:18:41
+model: gpt-4o-mini
+batch_index: 5
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0051', 'MUT_0052', 'MUT_0053', 'MUT_0054', 'MUT_0055', 'MUT_0056', 'MUT_0057', 'MUT_0058', 'MUT_0059', 'MUT_0060']
+prompt_tokens: 2362
+completion_tokens: 393
+total_tokens: 2755
+estimated_cost_usd: 0.0
+latency_seconds: 11.949
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0051",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0052",
+    "usefulness_score": 3,
+    "short_reason": "Increment change may affect loop behavior."
+  },
+  {
+    "mutant_id": "MUT_0053",
+    "usefulness_score": 4,
+    "short_reason": "Significant change in arithmetic operation."
+  },
+  {
+    "mutant_id": "MUT_0054",
+    "usefulness_score": 4,
+    "short_reason": "Similar to MUT_0053, but redundant."
+  },
+  {
+    "mutant_id": "MUT_0055",
+    "usefulness_score": 4,
+    "short_reason": "Alters critical calculation affecting flow."
+  },
+  {
+    "mutant_id": "MUT_0056",
+    "usefulness_score": 2,
+    "short_reason": "No effective change in logic."
+  },
+  {
+    "mutant_id": "MUT_0057",
+    "usefulness_score": 2,
+    "short_reason": "No effective change in logic."
+  },
+  {
+    "mutant_id": "MUT_0058",
+    "usefulness_score": 2,
+    "short_reason": "No effective change in logic."
+  },
+  {
+    "mutant_id": "MUT_0059",
+    "usefulness_score": 4,
+    "short_reason": "Critical substring operation change."
+  },
+  {
+    "mutant_id": "MUT_0060",
+    "usefulness_score": 4,
+    "short_reason": "Alters substring logic, potentially impactful."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:18:53
+model: gpt-4o-mini
+batch_index: 6
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0061', 'MUT_0062', 'MUT_0063', 'MUT_0064', 'MUT_0065', 'MUT_0066', 'MUT_0067', 'MUT_0068', 'MUT_0069', 'MUT_0070']
+prompt_tokens: 2205
+completion_tokens: 418
+total_tokens: 2623
+estimated_cost_usd: 0.0
+latency_seconds: 8.063
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0061",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0062",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0063",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0064",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but context may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0065",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0066",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0067",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0068",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but context may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0069",
+    "usefulness_score": 4,
+    "short_reason": "Negated conditionals can reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0070",
+    "usefulness_score": 4,
+    "short_reason": "Negated conditionals can reveal test suite weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:01
+model: gpt-4o-mini
+batch_index: 7
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0071', 'MUT_0072', 'MUT_0073', 'MUT_0074', 'MUT_0075', 'MUT_0076', 'MUT_0077', 'MUT_0078', 'MUT_0079', 'MUT_0080']
+prompt_tokens: 2546
+completion_tokens: 427
+total_tokens: 2973
+estimated_cost_usd: 0.0
+latency_seconds: 9.53
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0071",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a conditional that does not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0072",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a conditional that does not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0073",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a conditional that does not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0074",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a conditional that does not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0075",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a conditional that does not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0076",
+    "usefulness_score": 3,
+    "short_reason": "Negation of a conditional that could affect logic."
+  },
+  {
+    "mutant_id": "MUT_0077",
+    "usefulness_score": 3,
+    "short_reason": "Negation of a conditional that could affect logic."
+  },
+  {
+    "mutant_id": "MUT_0078",
+    "usefulness_score": 3,
+    "short_reason": "Negation of a conditional that could affect logic."
+  },
+  {
+    "mutant_id": "MUT_0079",
+    "usefulness_score": 4,
+    "short_reason": "Negation of a conditional that could reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0080",
+    "usefulness_score": 4,
+    "short_reason": "Negation of a conditional that could reveal weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:11
+model: gpt-4o-mini
+batch_index: 8
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0081', 'MUT_0082', 'MUT_0083', 'MUT_0084', 'MUT_0085', 'MUT_0086', 'MUT_0087', 'MUT_0088', 'MUT_0089', 'MUT_0090']
+prompt_tokens: 2690
+completion_tokens: 412
+total_tokens: 3102
+estimated_cost_usd: 0.0
+latency_seconds: 8.482
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0081",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0082",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0083",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0084",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0085",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0086",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0087",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0088",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0089",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0090",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; equivalent to original."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:19
+model: gpt-4o-mini
+batch_index: 9
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0091', 'MUT_0092', 'MUT_0093', 'MUT_0094', 'MUT_0095', 'MUT_0096', 'MUT_0097', 'MUT_0098', 'MUT_0099', 'MUT_0100']
+prompt_tokens: 2653
+completion_tokens: 412
+total_tokens: 3065
+estimated_cost_usd: 0.0
+latency_seconds: 7.794
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0091",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0092",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0093",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0094",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0095",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0096",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0097",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0098",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0099",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0100",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent to original."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:27
+model: gpt-4o-mini
+batch_index: 10
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0101', 'MUT_0102', 'MUT_0103', 'MUT_0104', 'MUT_0105', 'MUT_0106', 'MUT_0107', 'MUT_0108', 'MUT_0109', 'MUT_0110']
+prompt_tokens: 2488
+completion_tokens: 372
+total_tokens: 2860
+estimated_cost_usd: 0.0
+latency_seconds: 7.531
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0101",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0102",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0103",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0104",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0105",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0106",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0107",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0108",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0109",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  },
+  {
+    "mutant_id": "MUT_0110",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent to original code"
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:35
+model: gpt-4o-mini
+batch_index: 11
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0111', 'MUT_0112', 'MUT_0113', 'MUT_0114', 'MUT_0115', 'MUT_0116', 'MUT_0117', 'MUT_0118', 'MUT_0119', 'MUT_0120']
+prompt_tokens: 2827
+completion_tokens: 408
+total_tokens: 3235
+estimated_cost_usd: 0.0
+latency_seconds: 7.734
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0111",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0112",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0113",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0114",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0115",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0116",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0117",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0118",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0119",
+    "usefulness_score": 4,
+    "short_reason": "Introduces null return, likely to reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0120",
+    "usefulness_score": 4,
+    "short_reason": "Introduces null return, likely to reveal test weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:42
+model: gpt-4o-mini
+batch_index: 12
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0121', 'MUT_0122', 'MUT_0123', 'MUT_0124', 'MUT_0125', 'MUT_0126', 'MUT_0127', 'MUT_0128', 'MUT_0129', 'MUT_0130']
+prompt_tokens: 2243
+completion_tokens: 404
+total_tokens: 2647
+estimated_cost_usd: 0.0
+latency_seconds: 7.758
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0121",
+    "usefulness_score": 3,
+    "short_reason": "Null return may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0122",
+    "usefulness_score": 3,
+    "short_reason": "Similar to other mutants, may not reveal new weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0123",
+    "usefulness_score": 3,
+    "short_reason": "Null return could be trivial in context."
+  },
+  {
+    "mutant_id": "MUT_0124",
+    "usefulness_score": 4,
+    "short_reason": "Return value is critical for float precision checks."
+  },
+  {
+    "mutant_id": "MUT_0125",
+    "usefulness_score": 4,
+    "short_reason": "Null return affects double precision checks."
+  },
+  {
+    "mutant_id": "MUT_0126",
+    "usefulness_score": 4,
+    "short_reason": "Critical for handling BigDecimal conversions."
+  },
+  {
+    "mutant_id": "MUT_0127",
+    "usefulness_score": 3,
+    "short_reason": "Similar to other integer return mutants."
+  },
+  {
+    "mutant_id": "MUT_0128",
+    "usefulness_score": 3,
+    "short_reason": "May not reveal new issues in long handling."
+  },
+  {
+    "mutant_id": "MUT_0129",
+    "usefulness_score": 3,
+    "short_reason": "Similar to other BigInteger return mutants."
+  },
+  {
+    "mutant_id": "MUT_0130",
+    "usefulness_score": 4,
+    "short_reason": "Null return impacts float and double comparisons."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:50
+model: gpt-4o-mini
+batch_index: 13
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0131', 'MUT_0132', 'MUT_0133', 'MUT_0134', 'MUT_0135', 'MUT_0136', 'MUT_0137', 'MUT_0138', 'MUT_0139', 'MUT_0140']
+prompt_tokens: 2495
+completion_tokens: 415
+total_tokens: 2910
+estimated_cost_usd: 0.0
+latency_seconds: 7.174
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0131",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0132",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0133",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0134",
+    "usefulness_score": 4,
+    "short_reason": "Changes conditional boundary, likely to affect logic."
+  },
+  {
+    "mutant_id": "MUT_0135",
+    "usefulness_score": 4,
+    "short_reason": "Changes conditional boundary, likely to affect logic."
+  },
+  {
+    "mutant_id": "MUT_0136",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal weaknesses in condition handling."
+  },
+  {
+    "mutant_id": "MUT_0137",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal weaknesses in condition handling."
+  },
+  {
+    "mutant_id": "MUT_0138",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal weaknesses in condition handling."
+  },
+  {
+    "mutant_id": "MUT_0139",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal weaknesses in condition handling."
+  },
+  {
+    "mutant_id": "MUT_0140",
+    "usefulness_score": 5,
+    "short_reason": "Significant change in return value, likely to affect output."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:19:57
+model: gpt-4o-mini
+batch_index: 14
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0141', 'MUT_0142', 'MUT_0143', 'MUT_0144', 'MUT_0145', 'MUT_0146', 'MUT_0147', 'MUT_0148', 'MUT_0149', 'MUT_0150']
+prompt_tokens: 2247
+completion_tokens: 414
+total_tokens: 2661
+estimated_cost_usd: 0.0
+latency_seconds: 8.265
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0141",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation with no effect on logic."
+  },
+  {
+    "mutant_id": "MUT_0142",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful but may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0143",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can reveal weaknesses in test cases."
+  },
+  {
+    "mutant_id": "MUT_0144",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation; no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0145",
+    "usefulness_score": 3,
+    "short_reason": "Negating conditionals may expose test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0146",
+    "usefulness_score": 1,
+    "short_reason": "No effective change; return value remains true."
+  },
+  {
+    "mutant_id": "MUT_0147",
+    "usefulness_score": 1,
+    "short_reason": "No effective change; return value remains true."
+  },
+  {
+    "mutant_id": "MUT_0148",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation; return value remains false."
+  },
+  {
+    "mutant_id": "MUT_0149",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change may affect logic."
+  },
+  {
+    "mutant_id": "MUT_0150",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation; no change in logic."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:06
+model: gpt-4o-mini
+batch_index: 15
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0151', 'MUT_0152', 'MUT_0153', 'MUT_0154', 'MUT_0155', 'MUT_0156', 'MUT_0157', 'MUT_0158', 'MUT_0159', 'MUT_0160']
+prompt_tokens: 2633
+completion_tokens: 421
+total_tokens: 3054
+estimated_cost_usd: 0.0
+latency_seconds: 11.01
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0151",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0152",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0153",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0154",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0155",
+    "usefulness_score": 4,
+    "short_reason": "Significant change in loop behavior, likely to reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0156",
+    "usefulness_score": 3,
+    "short_reason": "Potentially impactful change, but context limits its effectiveness."
+  },
+  {
+    "mutant_id": "MUT_0157",
+    "usefulness_score": 3,
+    "short_reason": "Potentially impactful change, but context limits its effectiveness."
+  },
+  {
+    "mutant_id": "MUT_0158",
+    "usefulness_score": 3,
+    "short_reason": "Potentially impactful change, but context limits its effectiveness."
+  },
+  {
+    "mutant_id": "MUT_0159",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0160",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:17
+model: gpt-4o-mini
+batch_index: 16
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0161', 'MUT_0162', 'MUT_0163', 'MUT_0164', 'MUT_0165', 'MUT_0166', 'MUT_0167', 'MUT_0168', 'MUT_0169', 'MUT_0170']
+prompt_tokens: 2878
+completion_tokens: 420
+total_tokens: 3298
+estimated_cost_usd: 0.0
+latency_seconds: 7.559
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0161",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0162",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0163",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0164",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0165",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0166",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0167",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0168",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0169",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0170",
+    "usefulness_score": 2,
+    "short_reason": "Negated conditionals may not affect logic significantly."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:24
+model: gpt-4o-mini
+batch_index: 17
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0171', 'MUT_0172', 'MUT_0173', 'MUT_0174', 'MUT_0175', 'MUT_0176', 'MUT_0177', 'MUT_0178', 'MUT_0179', 'MUT_0180']
+prompt_tokens: 2391
+completion_tokens: 417
+total_tokens: 2808
+estimated_cost_usd: 0.0
+latency_seconds: 9.067
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0171",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0172",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0173",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0174",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0175",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0176",
+    "usefulness_score": 2,
+    "short_reason": "Mutation may affect loop behavior but is still trivial."
+  },
+  {
+    "mutant_id": "MUT_0177",
+    "usefulness_score": 2,
+    "short_reason": "Mutation may affect loop behavior but is still trivial."
+  },
+  {
+    "mutant_id": "MUT_0178",
+    "usefulness_score": 2,
+    "short_reason": "Mutation may affect loop behavior but is still trivial."
+  },
+  {
+    "mutant_id": "MUT_0179",
+    "usefulness_score": 2,
+    "short_reason": "Mutation may affect loop behavior but is still trivial."
+  },
+  {
+    "mutant_id": "MUT_0180",
+    "usefulness_score": 3,
+    "short_reason": "Mutation affects conditional logic, potentially revealing test weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:33
+model: gpt-4o-mini
+batch_index: 18
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0181', 'MUT_0182', 'MUT_0183', 'MUT_0184', 'MUT_0185', 'MUT_0186', 'MUT_0187', 'MUT_0188', 'MUT_0189', 'MUT_0190']
+prompt_tokens: 2026
+completion_tokens: 408
+total_tokens: 2434
+estimated_cost_usd: 0.0
+latency_seconds: 7.728
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0181",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0182",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no effect on behavior."
+  },
+  {
+    "mutant_id": "MUT_0183",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no effect on behavior."
+  },
+  {
+    "mutant_id": "MUT_0184",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0185",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0186",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no effect on behavior."
+  },
+  {
+    "mutant_id": "MUT_0187",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, may reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0188",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0189",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0190",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no effect on behavior."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:41
+model: gpt-4o-mini
+batch_index: 19
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0191', 'MUT_0192', 'MUT_0193', 'MUT_0194', 'MUT_0195', 'MUT_0196', 'MUT_0197', 'MUT_0198', 'MUT_0199', 'MUT_0200']
+prompt_tokens: 2403
+completion_tokens: 420
+total_tokens: 2823
+estimated_cost_usd: 0.0
+latency_seconds: 8.169
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0191",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0192",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0193",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0194",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0195",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0196",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0197",
+    "usefulness_score": 2,
+    "short_reason": "Slightly more complex condition, but still trivial."
+  },
+  {
+    "mutant_id": "MUT_0198",
+    "usefulness_score": 2,
+    "short_reason": "Slightly more complex condition, but still trivial."
+  },
+  {
+    "mutant_id": "MUT_0199",
+    "usefulness_score": 2,
+    "short_reason": "Slightly more complex condition, but still trivial."
+  },
+  {
+    "mutant_id": "MUT_0200",
+    "usefulness_score": 2,
+    "short_reason": "Slightly more complex condition, but still trivial."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:49
+model: gpt-4o-mini
+batch_index: 20
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0201', 'MUT_0202', 'MUT_0203', 'MUT_0204', 'MUT_0205', 'MUT_0206', 'MUT_0207', 'MUT_0208', 'MUT_0209', 'MUT_0210']
+prompt_tokens: 2257
+completion_tokens: 434
+total_tokens: 2691
+estimated_cost_usd: 0.0
+latency_seconds: 8.727
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0201",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a condition that is already complex, likely trivial."
+  },
+  {
+    "mutant_id": "MUT_0202",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; condition remains the same."
+  },
+  {
+    "mutant_id": "MUT_0203",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic; condition remains the same."
+  },
+  {
+    "mutant_id": "MUT_0204",
+    "usefulness_score": 1,
+    "short_reason": "No change in return value; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0205",
+    "usefulness_score": 1,
+    "short_reason": "No change in return value; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0206",
+    "usefulness_score": 1,
+    "short_reason": "No change in return value; trivial mutation."
+  },
+  {
+    "mutant_id": "MUT_0207",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a condition that is already complex, likely trivial."
+  },
+  {
+    "mutant_id": "MUT_0208",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a condition that is already complex, likely trivial."
+  },
+  {
+    "mutant_id": "MUT_0209",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value from true to false, likely to reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0210",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value from true to false, likely to reveal weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:20:58
+model: gpt-4o-mini
+batch_index: 21
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0211', 'MUT_0212', 'MUT_0213', 'MUT_0214', 'MUT_0215', 'MUT_0216', 'MUT_0217', 'MUT_0218', 'MUT_0219', 'MUT_0220']
+prompt_tokens: 2191
+completion_tokens: 434
+total_tokens: 2625
+estimated_cost_usd: 0.0
+latency_seconds: 10.889
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0211",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, original logic remains unchanged."
+  },
+  {
+    "mutant_id": "MUT_0212",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but similar to original logic."
+  },
+  {
+    "mutant_id": "MUT_0213",
+    "usefulness_score": 3,
+    "short_reason": "Similar to previous mutant, may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0214",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value significantly, likely to reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0215",
+    "usefulness_score": 4,
+    "short_reason": "Significant change in return value, could expose flaws in tests."
+  },
+  {
+    "mutant_id": "MUT_0216",
+    "usefulness_score": 4,
+    "short_reason": "Alters return value, likely to test suite effectiveness."
+  },
+  {
+    "mutant_id": "MUT_0217",
+    "usefulness_score": 4,
+    "short_reason": "Significant mutation, likely to reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0218",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value, could expose weaknesses in tests."
+  },
+  {
+    "mutant_id": "MUT_0219",
+    "usefulness_score": 4,
+    "short_reason": "Alters return value, likely to reveal flaws in the test suite."
+  },
+  {
+    "mutant_id": "MUT_0220",
+    "usefulness_score": 4,
+    "short_reason": "Significant change in return value, likely to expose test weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:21:09
+model: gpt-4o-mini
+batch_index: 22
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0221', 'MUT_0222', 'MUT_0223', 'MUT_0224', 'MUT_0225', 'MUT_0226', 'MUT_0227', 'MUT_0228', 'MUT_0229', 'MUT_0230']
+prompt_tokens: 2194
+completion_tokens: 431
+total_tokens: 2625
+estimated_cost_usd: 0.0
+latency_seconds: 8.116
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0221",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be caught by existing tests."
+  },
+  {
+    "mutant_id": "MUT_0222",
+    "usefulness_score": 2,
+    "short_reason": "Similar to previous mutant, low impact on test outcomes."
+  },
+  {
+    "mutant_id": "MUT_0223",
+    "usefulness_score": 2,
+    "short_reason": "Trivial change, unlikely to reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0224",
+    "usefulness_score": 2,
+    "short_reason": "Minimal impact, likely to be equivalent to original."
+  },
+  {
+    "mutant_id": "MUT_0225",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but similar to original logic."
+  },
+  {
+    "mutant_id": "MUT_0226",
+    "usefulness_score": 3,
+    "short_reason": "Similar to previous, but may reveal some edge cases."
+  },
+  {
+    "mutant_id": "MUT_0227",
+    "usefulness_score": 4,
+    "short_reason": "More complex condition, likely to expose test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0228",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to affect test results."
+  },
+  {
+    "mutant_id": "MUT_0229",
+    "usefulness_score": 3,
+    "short_reason": "Similar to previous, but may catch some edge cases."
+  },
+  {
+    "mutant_id": "MUT_0230",
+    "usefulness_score": 4,
+    "short_reason": "Significant change, likely to reveal weaknesses in numeric handling tests."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:21:17
+model: gpt-4o-mini
+batch_index: 23
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0231', 'MUT_0232', 'MUT_0233', 'MUT_0234', 'MUT_0235', 'MUT_0236', 'MUT_0237', 'MUT_0238', 'MUT_0239', 'MUT_0240']
+prompt_tokens: 2067
+completion_tokens: 406
+total_tokens: 2473
+estimated_cost_usd: 0.0
+latency_seconds: 7.019
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0231",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be equivalent."
+  },
+  {
+    "mutant_id": "MUT_0232",
+    "usefulness_score": 3,
+    "short_reason": "May reveal weaknesses but similar to other mutants."
+  },
+  {
+    "mutant_id": "MUT_0233",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be equivalent."
+  },
+  {
+    "mutant_id": "MUT_0234",
+    "usefulness_score": 4,
+    "short_reason": "Non-trivial mutation that could affect logic."
+  },
+  {
+    "mutant_id": "MUT_0235",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0236",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0237",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0238",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be equivalent."
+  },
+  {
+    "mutant_id": "MUT_0239",
+    "usefulness_score": 4,
+    "short_reason": "Non-trivial mutation that could affect logic."
+  },
+  {
+    "mutant_id": "MUT_0240",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be equivalent."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:21:24
+model: gpt-4o-mini
+batch_index: 24
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0241', 'MUT_0242', 'MUT_0243', 'MUT_0244', 'MUT_0245', 'MUT_0246', 'MUT_0247', 'MUT_0248', 'MUT_0249', 'MUT_0250']
+prompt_tokens: 2021
+completion_tokens: 404
+total_tokens: 2425
+estimated_cost_usd: 0.0
+latency_seconds: 7.002
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0241",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, same return value."
+  },
+  {
+    "mutant_id": "MUT_0242",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, same return value."
+  },
+  {
+    "mutant_id": "MUT_0243",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, same return value."
+  },
+  {
+    "mutant_id": "MUT_0244",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but similar return value."
+  },
+  {
+    "mutant_id": "MUT_0245",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but similar return value."
+  },
+  {
+    "mutant_id": "MUT_0246",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent mutation."
+  },
+  {
+    "mutant_id": "MUT_0247",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent mutation."
+  },
+  {
+    "mutant_id": "MUT_0248",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, same return value."
+  },
+  {
+    "mutant_id": "MUT_0249",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent mutation."
+  },
+  {
+    "mutant_id": "MUT_0250",
+    "usefulness_score": 1,
+    "short_reason": "No change in logic, equivalent mutation."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:21:31
+model: gpt-4o-mini
+batch_index: 25
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0251', 'MUT_0252', 'MUT_0253', 'MUT_0254', 'MUT_0255', 'MUT_0256', 'MUT_0257', 'MUT_0258', 'MUT_0259', 'MUT_0260']
+prompt_tokens: 2038
+completion_tokens: 398
+total_tokens: 2436
+estimated_cost_usd: 0.0
+latency_seconds: 8.409
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0251",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0252",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may reveal some weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0253",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may reveal some weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0254",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can expose logical flaws."
+  },
+  {
+    "mutant_id": "MUT_0255",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can expose logical flaws."
+  },
+  {
+    "mutant_id": "MUT_0256",
+    "usefulness_score": 2,
+    "short_reason": "Primitive return change is less impactful."
+  },
+  {
+    "mutant_id": "MUT_0257",
+    "usefulness_score": 2,
+    "short_reason": "Primitive return change is less impactful."
+  },
+  {
+    "mutant_id": "MUT_0258",
+    "usefulness_score": 2,
+    "short_reason": "Primitive return change is less impactful."
+  },
+  {
+    "mutant_id": "MUT_0259",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may reveal some weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0260",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may reveal some weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:21:40
+model: gpt-4o-mini
+batch_index: 26
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0261', 'MUT_0262', 'MUT_0263', 'MUT_0264', 'MUT_0265', 'MUT_0266', 'MUT_0267', 'MUT_0268', 'MUT_0269', 'MUT_0270']
+prompt_tokens: 1890
+completion_tokens: 412
+total_tokens: 2302
+estimated_cost_usd: 0.0
+latency_seconds: 8.437
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0263",
+    "usefulness_score": 5,
+    "short_reason": "Replaces return value, likely to reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0268",
+    "usefulness_score": 5,
+    "short_reason": "Replaces return value, likely to reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0261",
+    "usefulness_score": 4,
+    "short_reason": "Negates condition, could expose logical flaws."
+  },
+  {
+    "mutant_id": "MUT_0262",
+    "usefulness_score": 4,
+    "short_reason": "Negates condition, could expose logical flaws."
+  },
+  {
+    "mutant_id": "MUT_0264",
+    "usefulness_score": 3,
+    "short_reason": "Changes conditional boundary, moderate impact."
+  },
+  {
+    "mutant_id": "MUT_0265",
+    "usefulness_score": 3,
+    "short_reason": "Changes conditional boundary, moderate impact."
+  },
+  {
+    "mutant_id": "MUT_0266",
+    "usefulness_score": 2,
+    "short_reason": "Negates condition but similar to existing mutants."
+  },
+  {
+    "mutant_id": "MUT_0267",
+    "usefulness_score": 2,
+    "short_reason": "Negates condition but similar to existing mutants."
+  },
+  {
+    "mutant_id": "MUT_0269",
+    "usefulness_score": 2,
+    "short_reason": "Changes conditional boundary but similar to existing mutants."
+  },
+  {
+    "mutant_id": "MUT_0270",
+    "usefulness_score": 2,
+    "short_reason": "Changes conditional boundary but similar to existing mutants."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:21:48
+model: gpt-4o-mini
+batch_index: 27
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0271', 'MUT_0272', 'MUT_0273', 'MUT_0274', 'MUT_0275', 'MUT_0276', 'MUT_0277', 'MUT_0278', 'MUT_0279', 'MUT_0280']
+prompt_tokens: 2027
+completion_tokens: 425
+total_tokens: 2452
+estimated_cost_usd: 0.0
+latency_seconds: 14.241
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0271",
+    "usefulness_score": 2,
+    "short_reason": "Negation of a condition that may not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0272",
+    "usefulness_score": 2,
+    "short_reason": "Similar to MUT_0271, negation may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0273",
+    "usefulness_score": 4,
+    "short_reason": "Changing return value could expose issues in handling."
+  },
+  {
+    "mutant_id": "MUT_0274",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect loop execution but is less impactful."
+  },
+  {
+    "mutant_id": "MUT_0275",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change in condition could reveal edge cases."
+  },
+  {
+    "mutant_id": "MUT_0276",
+    "usefulness_score": 2,
+    "short_reason": "Negation of loop condition is unlikely to reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0277",
+    "usefulness_score": 2,
+    "short_reason": "Negation of condition in loop may not affect logic."
+  },
+  {
+    "mutant_id": "MUT_0278",
+    "usefulness_score": 5,
+    "short_reason": "Removing validation could lead to significant failures."
+  },
+  {
+    "mutant_id": "MUT_0279",
+    "usefulness_score": 4,
+    "short_reason": "Changing return value could expose handling issues."
+  },
+  {
+    "mutant_id": "MUT_0280",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect loop execution but is less impactful."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:02
+model: gpt-4o-mini
+batch_index: 28
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0281', 'MUT_0282', 'MUT_0283', 'MUT_0284', 'MUT_0285', 'MUT_0286', 'MUT_0287', 'MUT_0288', 'MUT_0289', 'MUT_0290']
+prompt_tokens: 2073
+completion_tokens: 409
+total_tokens: 2482
+estimated_cost_usd: 0.0
+latency_seconds: 8.91
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0285",
+    "usefulness_score": 5,
+    "short_reason": "Removes validation, likely to expose test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0286",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value type, could affect logic."
+  },
+  {
+    "mutant_id": "MUT_0287",
+    "usefulness_score": 4,
+    "short_reason": "Alters return value, may reveal test suite gaps."
+  },
+  {
+    "mutant_id": "MUT_0282",
+    "usefulness_score": 3,
+    "short_reason": "Negates loop condition, potential to expose flaws."
+  },
+  {
+    "mutant_id": "MUT_0290",
+    "usefulness_score": 3,
+    "short_reason": "Negates loop condition, may reveal test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0284",
+    "usefulness_score": 2,
+    "short_reason": "Negates condition, but may be trivial."
+  },
+  {
+    "mutant_id": "MUT_0283",
+    "usefulness_score": 2,
+    "short_reason": "Negates condition, likely trivial."
+  },
+  {
+    "mutant_id": "MUT_0281",
+    "usefulness_score": 1,
+    "short_reason": "No effective mutation, likely equivalent."
+  },
+  {
+    "mutant_id": "MUT_0288",
+    "usefulness_score": 1,
+    "short_reason": "No effective mutation, likely equivalent."
+  },
+  {
+    "mutant_id": "MUT_0289",
+    "usefulness_score": 1,
+    "short_reason": "No effective mutation, likely equivalent."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:11
+model: gpt-4o-mini
+batch_index: 29
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0291', 'MUT_0292', 'MUT_0293', 'MUT_0294', 'MUT_0295', 'MUT_0296', 'MUT_0297', 'MUT_0298', 'MUT_0299', 'MUT_0300']
+prompt_tokens: 2111
+completion_tokens: 430
+total_tokens: 2541
+estimated_cost_usd: 0.0
+latency_seconds: 9.917
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0293",
+    "usefulness_score": 5,
+    "short_reason": "Removes validation, likely to expose flaws in input handling."
+  },
+  {
+    "mutant_id": "MUT_0300",
+    "usefulness_score": 5,
+    "short_reason": "Removes validation, likely to expose flaws in input handling."
+  },
+  {
+    "mutant_id": "MUT_0294",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value, could reveal issues in handling special cases."
+  },
+  {
+    "mutant_id": "MUT_0295",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value, could reveal issues in handling special cases."
+  },
+  {
+    "mutant_id": "MUT_0291",
+    "usefulness_score": 3,
+    "short_reason": "Negates condition but does not change logic flow."
+  },
+  {
+    "mutant_id": "MUT_0292",
+    "usefulness_score": 3,
+    "short_reason": "Negates condition but does not change logic flow."
+  },
+  {
+    "mutant_id": "MUT_0296",
+    "usefulness_score": 2,
+    "short_reason": "Changes loop boundary, but impact may be minimal."
+  },
+  {
+    "mutant_id": "MUT_0297",
+    "usefulness_score": 2,
+    "short_reason": "Changes condition boundary, but impact may be minimal."
+  },
+  {
+    "mutant_id": "MUT_0298",
+    "usefulness_score": 2,
+    "short_reason": "Negates condition but does not change logic flow."
+  },
+  {
+    "mutant_id": "MUT_0299",
+    "usefulness_score": 2,
+    "short_reason": "Negates condition but does not change logic flow."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:21
+model: gpt-4o-mini
+batch_index: 30
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0301', 'MUT_0302', 'MUT_0303', 'MUT_0304', 'MUT_0305', 'MUT_0306', 'MUT_0307', 'MUT_0308', 'MUT_0309', 'MUT_0310']
+prompt_tokens: 2069
+completion_tokens: 406
+total_tokens: 2475
+estimated_cost_usd: 0.0
+latency_seconds: 7.404
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0301",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0302",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect loop execution."
+  },
+  {
+    "mutant_id": "MUT_0303",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect conditional execution."
+  },
+  {
+    "mutant_id": "MUT_0304",
+    "usefulness_score": 2,
+    "short_reason": "Negation of condition is trivial in this context."
+  },
+  {
+    "mutant_id": "MUT_0305",
+    "usefulness_score": 2,
+    "short_reason": "Negation of condition is trivial in this context."
+  },
+  {
+    "mutant_id": "MUT_0306",
+    "usefulness_score": 5,
+    "short_reason": "Removing validation can lead to significant errors."
+  },
+  {
+    "mutant_id": "MUT_0307",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0308",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect loop execution."
+  },
+  {
+    "mutant_id": "MUT_0309",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect conditional execution."
+  },
+  {
+    "mutant_id": "MUT_0310",
+    "usefulness_score": 2,
+    "short_reason": "Negation of condition is trivial in this context."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:29
+model: gpt-4o-mini
+batch_index: 31
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0311', 'MUT_0312', 'MUT_0313', 'MUT_0314', 'MUT_0315', 'MUT_0316', 'MUT_0317', 'MUT_0318', 'MUT_0319', 'MUT_0320']
+prompt_tokens: 2022
+completion_tokens: 437
+total_tokens: 2459
+estimated_cost_usd: 0.0
+latency_seconds: 11.614
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0311",
+    "usefulness_score": 1,
+    "short_reason": "Negation of a condition that does not change logic."
+  },
+  {
+    "mutant_id": "MUT_0312",
+    "usefulness_score": 5,
+    "short_reason": "Removing validation can expose flaws in input handling."
+  },
+  {
+    "mutant_id": "MUT_0313",
+    "usefulness_score": 2,
+    "short_reason": "Replacing return value with 0 may not reveal issues."
+  },
+  {
+    "mutant_id": "MUT_0314",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect logic but is context-dependent."
+  },
+  {
+    "mutant_id": "MUT_0315",
+    "usefulness_score": 3,
+    "short_reason": "Similar to MUT_0314, boundary change is context-dependent."
+  },
+  {
+    "mutant_id": "MUT_0316",
+    "usefulness_score": 1,
+    "short_reason": "Negation of a condition that does not change logic."
+  },
+  {
+    "mutant_id": "MUT_0317",
+    "usefulness_score": 1,
+    "short_reason": "Negation of a condition that does not change logic."
+  },
+  {
+    "mutant_id": "MUT_0318",
+    "usefulness_score": 2,
+    "short_reason": "Replacing return value with 0 may not reveal issues."
+  },
+  {
+    "mutant_id": "MUT_0319",
+    "usefulness_score": 2,
+    "short_reason": "Replacing return value with 0.0d may not reveal issues."
+  },
+  {
+    "mutant_id": "MUT_0320",
+    "usefulness_score": 2,
+    "short_reason": "Replacing return value with 0.0f may not reveal issues."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:40
+model: gpt-4o-mini
+batch_index: 32
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0321', 'MUT_0322', 'MUT_0323', 'MUT_0324', 'MUT_0325', 'MUT_0326', 'MUT_0327', 'MUT_0328', 'MUT_0329', 'MUT_0330']
+prompt_tokens: 1890
+completion_tokens: 420
+total_tokens: 2310
+estimated_cost_usd: 0.0
+latency_seconds: 8.174
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0321",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0322",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0323",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses but is still simple."
+  },
+  {
+    "mutant_id": "MUT_0324",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses but is still simple."
+  },
+  {
+    "mutant_id": "MUT_0325",
+    "usefulness_score": 4,
+    "short_reason": "Changing return value can expose test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0326",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0327",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0328",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses but is still simple."
+  },
+  {
+    "mutant_id": "MUT_0329",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal some weaknesses but is still simple."
+  },
+  {
+    "mutant_id": "MUT_0330",
+    "usefulness_score": 4,
+    "short_reason": "Changing return value can expose test suite weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:49
+model: gpt-4o-mini
+batch_index: 33
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0331', 'MUT_0332', 'MUT_0333', 'MUT_0334', 'MUT_0335', 'MUT_0336', 'MUT_0337', 'MUT_0338', 'MUT_0339', 'MUT_0340']
+prompt_tokens: 2013
+completion_tokens: 428
+total_tokens: 2441
+estimated_cost_usd: 0.0
+latency_seconds: 8.318
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0340",
+    "usefulness_score": 5,
+    "short_reason": "Removes validation, likely to expose flaws in input handling."
+  },
+  {
+    "mutant_id": "MUT_0335",
+    "usefulness_score": 4,
+    "short_reason": "Alters return value, potentially revealing issues in output handling."
+  },
+  {
+    "mutant_id": "MUT_0333",
+    "usefulness_score": 3,
+    "short_reason": "Negates condition, may expose logical flaws in comparisons."
+  },
+  {
+    "mutant_id": "MUT_0334",
+    "usefulness_score": 3,
+    "short_reason": "Negates condition, may expose logical flaws in comparisons."
+  },
+  {
+    "mutant_id": "MUT_0331",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to reveal significant weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0332",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to reveal significant weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0336",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to reveal significant weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0337",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to reveal significant weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0338",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to reveal significant weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0339",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, unlikely to reveal significant weaknesses."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:22:57
+model: gpt-4o-mini
+batch_index: 34
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0341', 'MUT_0342', 'MUT_0343', 'MUT_0344', 'MUT_0345', 'MUT_0346', 'MUT_0347', 'MUT_0348', 'MUT_0349', 'MUT_0350']
+prompt_tokens: 2055
+completion_tokens: 419
+total_tokens: 2474
+estimated_cost_usd: 0.0
+latency_seconds: 8.337
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0341",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0342",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect loop execution."
+  },
+  {
+    "mutant_id": "MUT_0343",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change could impact logic but is similar to original."
+  },
+  {
+    "mutant_id": "MUT_0344",
+    "usefulness_score": 2,
+    "short_reason": "Negation of condition is trivial in this context."
+  },
+  {
+    "mutant_id": "MUT_0345",
+    "usefulness_score": 2,
+    "short_reason": "Negation does not change the outcome significantly."
+  },
+  {
+    "mutant_id": "MUT_0346",
+    "usefulness_score": 2,
+    "short_reason": "Negation is trivial and unlikely to reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0347",
+    "usefulness_score": 5,
+    "short_reason": "Removing validation could expose critical flaws in tests."
+  },
+  {
+    "mutant_id": "MUT_0348",
+    "usefulness_score": 2,
+    "short_reason": "Trivial change, no significant impact on logic."
+  },
+  {
+    "mutant_id": "MUT_0349",
+    "usefulness_score": 2,
+    "short_reason": "Trivial change, no significant impact on logic."
+  },
+  {
+    "mutant_id": "MUT_0350",
+    "usefulness_score": 3,
+    "short_reason": "Boundary change may affect loop execution but is similar to original."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:05
+model: gpt-4o-mini
+batch_index: 35
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0351', 'MUT_0352', 'MUT_0353', 'MUT_0354', 'MUT_0355', 'MUT_0356', 'MUT_0357', 'MUT_0358', 'MUT_0359', 'MUT_0360']
+prompt_tokens: 2086
+completion_tokens: 409
+total_tokens: 2495
+estimated_cost_usd: 0.0
+latency_seconds: 9.47
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0355",
+    "usefulness_score": 5,
+    "short_reason": "Removes validation, likely to expose test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0356",
+    "usefulness_score": 4,
+    "short_reason": "Alters return value, could affect method behavior."
+  },
+  {
+    "mutant_id": "MUT_0357",
+    "usefulness_score": 4,
+    "short_reason": "Changes return value, may reveal test suite gaps."
+  },
+  {
+    "mutant_id": "MUT_0351",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change, moderate impact."
+  },
+  {
+    "mutant_id": "MUT_0358",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change, moderate impact."
+  },
+  {
+    "mutant_id": "MUT_0359",
+    "usefulness_score": 3,
+    "short_reason": "Boundary condition change, moderate impact."
+  },
+  {
+    "mutant_id": "MUT_0352",
+    "usefulness_score": 2,
+    "short_reason": "Negated loop condition, less likely to reveal issues."
+  },
+  {
+    "mutant_id": "MUT_0353",
+    "usefulness_score": 2,
+    "short_reason": "Negated condition, likely trivial."
+  },
+  {
+    "mutant_id": "MUT_0354",
+    "usefulness_score": 2,
+    "short_reason": "Negated condition, likely trivial."
+  },
+  {
+    "mutant_id": "MUT_0360",
+    "usefulness_score": 2,
+    "short_reason": "Negated loop condition, less likely to reveal issues."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:15
+model: gpt-4o-mini
+batch_index: 36
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0361', 'MUT_0362', 'MUT_0363', 'MUT_0364', 'MUT_0365', 'MUT_0366', 'MUT_0367', 'MUT_0368', 'MUT_0369', 'MUT_0370']
+prompt_tokens: 2061
+completion_tokens: 428
+total_tokens: 2489
+estimated_cost_usd: 0.0
+latency_seconds: 8.203
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0361",
+    "usefulness_score": 2,
+    "short_reason": "Negation of conditionals is trivial and may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0362",
+    "usefulness_score": 5,
+    "short_reason": "Removing validation can expose flaws in test coverage."
+  },
+  {
+    "mutant_id": "MUT_0363",
+    "usefulness_score": 3,
+    "short_reason": "Replacing return value with 0 may not significantly impact logic."
+  },
+  {
+    "mutant_id": "MUT_0364",
+    "usefulness_score": 4,
+    "short_reason": "Changing loop boundaries can reveal off-by-one errors."
+  },
+  {
+    "mutant_id": "MUT_0365",
+    "usefulness_score": 4,
+    "short_reason": "Boundary changes in conditions can expose logical flaws."
+  },
+  {
+    "mutant_id": "MUT_0366",
+    "usefulness_score": 2,
+    "short_reason": "Negation of loop conditions is often trivial."
+  },
+  {
+    "mutant_id": "MUT_0367",
+    "usefulness_score": 2,
+    "short_reason": "Negation of conditionals is trivial and may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0368",
+    "usefulness_score": 5,
+    "short_reason": "Removing validation can expose flaws in test coverage."
+  },
+  {
+    "mutant_id": "MUT_0369",
+    "usefulness_score": 3,
+    "short_reason": "Replacing return value with 0 may not significantly impact logic."
+  },
+  {
+    "mutant_id": "MUT_0370",
+    "usefulness_score": 4,
+    "short_reason": "Changing loop boundaries can reveal off-by-one errors."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:23
+model: gpt-4o-mini
+batch_index: 37
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0371', 'MUT_0372', 'MUT_0373', 'MUT_0374', 'MUT_0375', 'MUT_0376', 'MUT_0377', 'MUT_0378', 'MUT_0379', 'MUT_0380']
+prompt_tokens: 2063
+completion_tokens: 405
+total_tokens: 2468
+estimated_cost_usd: 0.0
+latency_seconds: 8.676
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0371",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0372",
+    "usefulness_score": 1,
+    "short_reason": "No effective change, retains original logic."
+  },
+  {
+    "mutant_id": "MUT_0373",
+    "usefulness_score": 1,
+    "short_reason": "No effective change, retains original logic."
+  },
+  {
+    "mutant_id": "MUT_0374",
+    "usefulness_score": 5,
+    "short_reason": "Removes validation, likely to expose test weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0375",
+    "usefulness_score": 3,
+    "short_reason": "Changes return value, could affect functionality."
+  },
+  {
+    "mutant_id": "MUT_0376",
+    "usefulness_score": 3,
+    "short_reason": "Changes return value, could affect functionality."
+  },
+  {
+    "mutant_id": "MUT_0377",
+    "usefulness_score": 3,
+    "short_reason": "Changes return value, could affect functionality."
+  },
+  {
+    "mutant_id": "MUT_0378",
+    "usefulness_score": 3,
+    "short_reason": "Changes return value, could affect functionality."
+  },
+  {
+    "mutant_id": "MUT_0379",
+    "usefulness_score": 3,
+    "short_reason": "Changes return value, could affect functionality."
+  },
+  {
+    "mutant_id": "MUT_0380",
+    "usefulness_score": 3,
+    "short_reason": "Changes return value, could affect functionality."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:32
+model: gpt-4o-mini
+batch_index: 38
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0381', 'MUT_0382', 'MUT_0383', 'MUT_0384', 'MUT_0385', 'MUT_0386', 'MUT_0387', 'MUT_0388', 'MUT_0389', 'MUT_0390']
+prompt_tokens: 2064
+completion_tokens: 421
+total_tokens: 2485
+estimated_cost_usd: 0.0
+latency_seconds: 11.592
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0381",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be ignored by tests."
+  },
+  {
+    "mutant_id": "MUT_0382",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0383",
+    "usefulness_score": 3,
+    "short_reason": "Negation may reveal conditional handling weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0384",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0385",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be ignored by tests."
+  },
+  {
+    "mutant_id": "MUT_0386",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0387",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be ignored by tests."
+  },
+  {
+    "mutant_id": "MUT_0388",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be ignored by tests."
+  },
+  {
+    "mutant_id": "MUT_0389",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, no change in logic."
+  },
+  {
+    "mutant_id": "MUT_0390",
+    "usefulness_score": 2,
+    "short_reason": "Trivial mutation, likely to be ignored by tests."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:43
+model: gpt-4o-mini
+batch_index: 39
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0391', 'MUT_0392', 'MUT_0393', 'MUT_0394', 'MUT_0395', 'MUT_0396', 'MUT_0397', 'MUT_0398', 'MUT_0399', 'MUT_0400']
+prompt_tokens: 2212
+completion_tokens: 412
+total_tokens: 2624
+estimated_cost_usd: 0.0
+latency_seconds: 7.93
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0391",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0392",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0393",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0394",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but may not reveal significant weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0395",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0396",
+    "usefulness_score": 2,
+    "short_reason": "Null return may not be effectively tested."
+  },
+  {
+    "mutant_id": "MUT_0397",
+    "usefulness_score": 2,
+    "short_reason": "Null return may not be effectively tested."
+  },
+  {
+    "mutant_id": "MUT_0398",
+    "usefulness_score": 2,
+    "short_reason": "Null return may not be effectively tested."
+  },
+  {
+    "mutant_id": "MUT_0399",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0400",
+    "usefulness_score": 2,
+    "short_reason": "Null return may not be effectively tested."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:51
+model: gpt-4o-mini
+batch_index: 40
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0401', 'MUT_0402', 'MUT_0403', 'MUT_0404', 'MUT_0405', 'MUT_0406', 'MUT_0407', 'MUT_0408', 'MUT_0409', 'MUT_0410']
+prompt_tokens: 2318
+completion_tokens: 428
+total_tokens: 2746
+estimated_cost_usd: 0.0
+latency_seconds: 7.876
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0401",
+    "usefulness_score": 2,
+    "short_reason": "Null return on a method that already handles null input."
+  },
+  {
+    "mutant_id": "MUT_0402",
+    "usefulness_score": 2,
+    "short_reason": "Similar to MUT_0401, null return is trivial."
+  },
+  {
+    "mutant_id": "MUT_0403",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0404",
+    "usefulness_score": 2,
+    "short_reason": "Null return on a constant return value is trivial."
+  },
+  {
+    "mutant_id": "MUT_0405",
+    "usefulness_score": 2,
+    "short_reason": "Null return on a method that already handles null input."
+  },
+  {
+    "mutant_id": "MUT_0406",
+    "usefulness_score": 2,
+    "short_reason": "Similar to MUT_0402, null return is trivial."
+  },
+  {
+    "mutant_id": "MUT_0407",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0408",
+    "usefulness_score": 2,
+    "short_reason": "Negation does not change the logic significantly."
+  },
+  {
+    "mutant_id": "MUT_0409",
+    "usefulness_score": 2,
+    "short_reason": "Null return on a constant return value is trivial."
+  },
+  {
+    "mutant_id": "MUT_0410",
+    "usefulness_score": 2,
+    "short_reason": "Null return on a method that already handles null input."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:23:59
+model: gpt-4o-mini
+batch_index: 41
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0411', 'MUT_0412', 'MUT_0413', 'MUT_0414', 'MUT_0415', 'MUT_0416', 'MUT_0417', 'MUT_0418', 'MUT_0419', 'MUT_0420']
+prompt_tokens: 2186
+completion_tokens: 404
+total_tokens: 2590
+estimated_cost_usd: 0.0
+latency_seconds: 8.051
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0411",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0412",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0413",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0414",
+    "usefulness_score": 4,
+    "short_reason": "Negating conditionals can reveal test suite weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0415",
+    "usefulness_score": 4,
+    "short_reason": "Removing method calls can expose missing assertions."
+  },
+  {
+    "mutant_id": "MUT_0416",
+    "usefulness_score": 2,
+    "short_reason": "Boundary change may not significantly affect logic."
+  },
+  {
+    "mutant_id": "MUT_0417",
+    "usefulness_score": 2,
+    "short_reason": "Boundary change may not significantly affect logic."
+  },
+  {
+    "mutant_id": "MUT_0418",
+    "usefulness_score": 3,
+    "short_reason": "Changing increments can affect loop behavior."
+  },
+  {
+    "mutant_id": "MUT_0419",
+    "usefulness_score": 2,
+    "short_reason": "Negating conditionals may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0420",
+    "usefulness_score": 1,
+    "short_reason": "Equivalent mutation, no change in behavior."
+  }
+]
+================================================================================
+timestamp: 2026-06-27T22:24:07
+model: gpt-4o-mini
+batch_index: 42
+temperature: 0.0
+top_p: 1.0
+mutant_ids: ['MUT_0421', 'MUT_0422', 'MUT_0423', 'MUT_0424', 'MUT_0425', 'MUT_0426', 'MUT_0427']
+prompt_tokens: 1431
+completion_tokens: 292
+total_tokens: 1723
+estimated_cost_usd: 0.0
+latency_seconds: 5.572
+status: success
+raw_response:
+[
+  {
+    "mutant_id": "MUT_0421",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0422",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0423",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0424",
+    "usefulness_score": 1,
+    "short_reason": "Trivial mutation, no change in behavior."
+  },
+  {
+    "mutant_id": "MUT_0425",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0426",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but may not reveal weaknesses."
+  },
+  {
+    "mutant_id": "MUT_0427",
+    "usefulness_score": 3,
+    "short_reason": "Potentially useful, but may not reveal weaknesses."
+  }
+]

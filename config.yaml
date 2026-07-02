@@ -1,0 +1,53 @@
+# LR Pipeline config for pilot experiment
+
+# LLM configuration
+model: "gpt-4o-mini"
+temperature: 0
+top_p: 1
+
+# Set dry_run: true to test the whole pipeline without calling OpenAI API.
+# For real pilot experiment, set dry_run: false and create a local .env file with OPENAI_API_KEY.
+dry_run: false
+
+# Selection configuration
+top_percent: 10
+random_seed: 42
+
+# Checkpoint/resume.
+# If API quota/billing stops halfway, rerun later and processed mutant_id values will be skipped.
+resume_enabled: true
+checkpoint_file: "results/pilot_gpt_checkpoint.jsonl"
+
+# Set true only when you intentionally want to delete old checkpoint and rerun from zero.
+reset_checkpoint: false
+
+# "global" = select top 10% from the whole mutant pool.
+# "by_group" = select top 10% per project/version/class_name.
+selection_scope: "global"
+group_columns:
+  - "project"
+  - "version"
+  - "class_name"
+
+# Batch size for GPT calls. Keep small in pilot to reduce parse errors.
+batch_size: 10
+
+# Input/output paths
+input_file: "data/pilot_mutant_pool.csv"
+fallback_input_file: "data/sample_mutant_pool.csv"
+prompt_file: "prompts/ranking_prompt.txt"
+
+gpt_ranking_output: "results/pilot_gpt_ranking.csv"
+gpt_selected_output: "results/pilot_gpt_selected.csv"
+random_selected_output: "results/pilot_random_selected.csv"
+
+api_log_file: "logs/pilot_api_log.txt"
+cost_log_file: "logs/pilot_cost_log.csv"
+validation_log_file: "logs/validation_report.txt"
+
+# Cost estimation config.
+# Put current official OpenAI prices here if your team needs estimated USD cost.
+# If left as 0, the script still logs tokens but estimated cost is 0.
+price_per_1m_input_usd: 0
+price_per_1m_output_usd: 0
+usd_to_vnd: 25000

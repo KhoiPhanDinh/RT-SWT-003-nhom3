@@ -1,0 +1,388 @@
+mutant_id,project,version,class_name,method_name,line_number,mutation_operator,original_code,mutated_code,surrounding_context,selection_strategy,selected_by
+MUT_0328,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (b < a) {,"// PIT Mutated: negated conditional
+if (b < a) {","     * @return the smallest of the values.
+     */
+    public static long min(long a, final long b, final long c) {
+        if (b < a) {
+            a = b;
+        }
+        if (c < a) {
+",random_seed_42,random
+MUT_0058,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,final int expPos = str.indexOf('e') + str.indexOf('E') + 1; // assumes both not present,"// PIT Mutated: Replaced integer addition with subtraction
+final int expPos = str.indexOf('e') + str.indexOf('E') + 1; // assumes both not present","        final String dec;
+        final String exp;
+        final int decPos = str.indexOf('.');
+        final int expPos = str.indexOf('e') + str.indexOf('E') + 1; // assumes both not present
+        // if both e and E are present, this is caught by the checks on expPos (which prevent IOOBE)
+        // and the parsing which will detect if e or E appear in a number due to using the wrong offset
+        // Detect if the return type has been requested
+",random_seed_42,random
+MUT_0013,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (str == null) {,"// PIT Mutated: negated conditional
+if (str == null) {","     * @since 3.2
+     */
+    public static BigInteger createBigInteger(final String str) {
+        if (str == null) {
+            return null;
+        }
+        if (str.isEmpty()) {
+",random_seed_42,random
+MUT_0380,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,toDouble,,PrimitiveReturnsMutator,return Double.parseDouble(str);,"// PIT Mutated: replaced double return with 0.0d for org/apache/commons/lang3/math/NumberUtils::toDouble
+return Double.parseDouble(str);","     */
+    public static double toDouble(final String str, final double defaultValue) {
+        try {
+            return Double.parseDouble(str);
+        } catch (final RuntimeException e) {
+            return defaultValue;
+        }
+",random_seed_42,random
+MUT_0141,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,for (int i = str.length() - 1; i >= 0; i--) {,"// PIT Mutated: changed conditional boundary
+for (int i = str.length() - 1; i >= 0; i--) {","        if (str == null) {
+            return true;
+        }
+        for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) != '0') {
+                return false;
+            }
+",random_seed_42,random
+MUT_0126,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return createBigDecimal(numeric);,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return createBigDecimal(numeric);","                    // ignore the bad number
+                }
+                try {
+                    return createBigDecimal(numeric);
+                } catch (final NumberFormatException ignored) {
+                    // ignore the bad number
+                }
+",random_seed_42,random
+MUT_0115,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {","// PIT Mutated: negated conditional
+if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {","            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {
+                return f;
+            }
+            if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+                final BigDecimal b = createBigDecimal(str);
+                if (b.compareTo(BigDecimal.valueOf(d.doubleValue())) == 0) {
+                    return d;
+",random_seed_42,random
+MUT_0072,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (str.startsWith(pfx, offset)) {","// PIT Mutated: negated conditional
+if (str.startsWith(pfx, offset)) {","        final int offset = isSign(str.charAt(0)) ? 1 : 0;
+        int pfxLen = 0;
+        for (final String pfx : hexPrefixes) {
+            if (str.startsWith(pfx, offset)) {
+                pfxLen += pfx.length() + offset;
+                break;
+            }
+",random_seed_42,random
+MUT_0378,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,toByte,,PrimitiveReturnsMutator,return defaultValue;,"// PIT Mutated: replaced byte return with 0 for org/apache/commons/lang3/math/NumberUtils::toByte
+return defaultValue;","        try {
+            return Byte.parseByte(str);
+        } catch (final RuntimeException e) {
+            return defaultValue;
+        }
+    }
+
+",random_seed_42,random
+MUT_0053,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,MathMutator,pfxLen += pfx.length() + offset;,"// PIT Mutated: Replaced integer addition with subtraction
+pfxLen += pfx.length() + offset;","        int pfxLen = 0;
+        for (final String pfx : hexPrefixes) {
+            if (str.startsWith(pfx, offset)) {
+                pfxLen += pfx.length() + offset;
+                break;
+            }
+        }
+",random_seed_42,random
+MUT_0347,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,validateArray,,VoidMethodCallMutator,validateArray(array);,"// PIT Mutated: removed call to org/apache/commons/lang3/math/NumberUtils::validateArray
+validateArray(array);","     */
+    public static double min(final double... array) {
+        // Validates input
+        validateArray(array);
+        // Finds and returns min
+        double min = array[0];
+        for (int i = 1; i < array.length; i++) {
+",random_seed_42,random
+MUT_0280,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,for (int j = 1; j < array.length; j++) {,"// PIT Mutated: changed conditional boundary
+for (int j = 1; j < array.length; j++) {","        validateArray(array);
+        // Finds and returns max
+        double max = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (Double.isNaN(array[j])) {
+                return Double.NaN;
+            }
+",random_seed_42,random
+MUT_0045,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (expPos <= decPos || expPos > length) { // prevents double exponent causing IOOBE,"// PIT Mutated: changed conditional boundary
+if (expPos <= decPos || expPos > length) { // prevents double exponent causing IOOBE","        final boolean requestType = !Character.isDigit(lastChar) && lastChar != '.';
+        if (decPos > -1) { // there is a decimal point
+            if (expPos > -1) { // there is an exponent
+                if (expPos <= decPos || expPos > length) { // prevents double exponent causing IOOBE
+                    throw new NumberFormatException(str + "" is not a valid number."");
+                }
+                dec = str.substring(decPos + 1, expPos);
+",random_seed_42,random
+MUT_0303,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (array[j] > max) {,"// PIT Mutated: changed conditional boundary
+if (array[j] > max) {","        // Finds and returns max
+        long max = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (array[j] > max) {
+                max = array[j];
+            }
+        }
+",random_seed_42,random
+MUT_0217,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanTrueReturnValsMutator,return false;,"// PIT Mutated: replaced boolean return with true for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return false;","                int i = start + 1;
+                for (; i < chars.length; i++) {
+                    if (!CharUtils.isOctal(chars[i])) {
+                        return false;
+                    }
+                }
+                return true;
+",random_seed_42,random
+MUT_0017,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (str.startsWith(""0x"", pos) || str.startsWith(""0X"", pos)) { // hex","// PIT Mutated: negated conditional
+if (str.startsWith(""""0x"""", pos) || str.startsWith(""""0X"""", pos)) { // hex","        } else if (char0 == '+') {
+            pos = 1;
+        }
+        if (str.startsWith(""0x"", pos) || str.startsWith(""0X"", pos)) { // hex
+            radix = 16;
+            pos += 2;
+        } else if (str.startsWith(""#"", pos)) { // alternative hex (allowed by Long/Integer)
+",random_seed_42,random
+MUT_0016,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,} else if (char0 == '+') {,"// PIT Mutated: negated conditional
+} else if (char0 == '+') {","        if (char0 == '-') {
+            negate = true;
+            pos = 1;
+        } else if (char0 == '+') {
+            pos = 1;
+        }
+        if (str.startsWith(""0x"", pos) || str.startsWith(""0X"", pos)) { // hex
+",random_seed_42,random
+MUT_0048,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (expPos > -1 && expPos < length - 1) {,"// PIT Mutated: changed conditional boundary
+if (expPos > -1 && expPos < length - 1) {","            dec = null;
+        }
+        if (requestType) {
+            if (expPos > -1 && expPos < length - 1) {
+                exp = str.substring(expPos + 1, length - 1);
+            } else {
+                exp = null;
+",random_seed_42,random
+MUT_0112,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {","// PIT Mutated: negated conditional
+if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {","        try {
+            final Float f = createFloat(str);
+            final Double d = createDouble(str);
+            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {
+                return f;
+            }
+            if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+",random_seed_42,random
+MUT_0120,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,createNumber,,NullReturnValsMutator,return createLong(str);,"// PIT Mutated: replaced return value with null for org/apache/commons/lang3/math/NumberUtils::createNumber
+return createLong(str);","                return createBigInteger(str);
+            }
+            if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                return createLong(str);
+            }
+            return createInteger(str);
+        }
+",random_seed_42,random
+MUT_0259,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (b > a) {,"// PIT Mutated: changed conditional boundary
+if (b > a) {","     * @return the largest of the values.
+     */
+    public static int max(int a, final int b, final int c) {
+        if (b > a) {
+            a = b;
+        }
+        if (c > a) {
+",random_seed_42,random
+MUT_0309,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,if (array[i] > max) {,"// PIT Mutated: changed conditional boundary
+if (array[i] > max) {","        // Finds and returns max
+        short max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+",random_seed_42,random
+MUT_0014,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (str.isEmpty()) {,"// PIT Mutated: negated conditional
+if (str.isEmpty()) {","        if (str == null) {
+            return null;
+        }
+        if (str.isEmpty()) {
+            throw new NumberFormatException(""An empty string is not a valid number"");
+        }
+        int pos = 0; // offset within string
+",random_seed_42,random
+MUT_0288,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,for (int j = 1; j < array.length; j++) {,"// PIT Mutated: changed conditional boundary
+for (int j = 1; j < array.length; j++) {","        validateArray(array);
+        // Finds and returns max
+        float max = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (Float.isNaN(array[j])) {
+                return Float.NaN;
+            }
+",random_seed_42,random
+MUT_0102,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (!(f.isInfinite() || f.floatValue() == 0.0F && !isZero(mant, dec))) {","// PIT Mutated: negated conditional
+if (!(f.isInfinite() || f.floatValue() == 0.0F && !isZero(mant, dec))) {","            case 'F':
+                try {
+                    final Float f = createFloat(str);
+                    if (!(f.isInfinite() || f.floatValue() == 0.0F && !isZero(mant, dec))) {
+                        // If it's too big for a float or the float value = 0 and the string
+                        // has non-zeros in it, then float does not have the precision we want
+                        return f;
+",random_seed_42,random
+MUT_0367,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (array[i] < min) {,"// PIT Mutated: negated conditional
+if (array[i] < min) {","        // Finds and returns min
+        long min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+",random_seed_42,random
+MUT_0333,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (b < a) {,"// PIT Mutated: negated conditional
+if (b < a) {","     * @return the smallest of the values.
+     */
+    public static short min(short a, final short b, final short c) {
+        if (b < a) {
+            a = b;
+        }
+        if (c < a) {
+",random_seed_42,random
+MUT_0360,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,for (int j = 1; j < array.length; j++) {,"// PIT Mutated: negated conditional
+for (int j = 1; j < array.length; j++) {","        validateArray(array);
+        // Finds and returns min
+        int min = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (array[j] < min) {
+                min = array[j];
+            }
+",random_seed_42,random
+MUT_0215,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isCreatable,,BooleanTrueReturnValsMutator,"return false; // str == ""0x""","// PIT Mutated: replaced boolean return with true for org/apache/commons/lang3/math/NumberUtils::isCreatable
+return false; // str == """"0x""""","            if (chars[start + 1] == 'x' || chars[start + 1] == 'X') { // leading 0x/0X
+                int i = start + 2;
+                if (i == sz) {
+                    return false; // str == ""0x""
+                }
+                // checking hex (it can't be anything else)
+                for (; i < chars.length; i++) {
+",random_seed_42,random
+MUT_0113,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {","// PIT Mutated: negated conditional
+if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {","        try {
+            final Float f = createFloat(str);
+            final Double d = createDouble(str);
+            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {
+                return f;
+            }
+            if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+",random_seed_42,random
+MUT_0230,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isDigits,,BooleanFalseReturnValsMutator,return StringUtils.isNumeric(str);,"// PIT Mutated: replaced boolean return with false for org/apache/commons/lang3/math/NumberUtils::isDigits
+return StringUtils.isNumeric(str);","     * @return {@code true} if str contains only Unicode numeric
+     */
+    public static boolean isDigits(final String str) {
+        return StringUtils.isNumeric(str);
+    }
+
+    /**
+",random_seed_42,random
+MUT_0302,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,for (int j = 1; j < array.length; j++) {,"// PIT Mutated: changed conditional boundary
+for (int j = 1; j < array.length; j++) {","        validateArray(array);
+        // Finds and returns max
+        long max = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (array[j] > max) {
+                max = array[j];
+            }
+",random_seed_42,random
+MUT_0143,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (str == null) {,"// PIT Mutated: negated conditional
+if (str == null) {","     * @return if it is all zeros or {@code null}.
+     */
+    private static boolean isAllZeros(final String str) {
+        if (str == null) {
+            return true;
+        }
+        for (int i = str.length() - 1; i >= 0; i--) {
+",random_seed_42,random
+MUT_0415,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,isTrue,,VoidMethodCallMutator,"Validate.isTrue(Array.getLength(array) != 0, ""Array cannot be empty."");","// PIT Mutated: removed call to org/apache/commons/lang3/Validate::isTrue
+Validate.isTrue(Array.getLength(array) != 0, """"Array cannot be empty."""");","     */
+    private static void validateArray(final Object array) {
+        Objects.requireNonNull(array, ""array"");
+        Validate.isTrue(Array.getLength(array) != 0, ""Array cannot be empty."");
+    }
+
+    private static boolean withDecimalsParsing(final String str, final int beginIdx) {
+",random_seed_42,random
+MUT_0004,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,compare,,PrimitiveReturnsMutator,"return Short.compare(x, y);","// PIT Mutated: replaced int return with 0 for org/apache/commons/lang3/math/NumberUtils::compare
+return Short.compare(x, y);","     */
+    @Deprecated
+    public static int compare(final short x, final short y) {
+        return Short.compare(x, y);
+    }
+
+    /**
+",random_seed_42,random
+MUT_0389,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,toInt,,PrimitiveReturnsMutator,return Integer.parseInt(str);,"// PIT Mutated: replaced int return with 0 for org/apache/commons/lang3/math/NumberUtils::toInt
+return Integer.parseInt(str);","     */
+    public static int toInt(final String str, final int defaultValue) {
+        try {
+            return Integer.parseInt(str);
+        } catch (final RuntimeException e) {
+            return defaultValue;
+        }
+",random_seed_42,random
+MUT_0413,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,toShort,,PrimitiveReturnsMutator,return defaultValue;,"// PIT Mutated: replaced short return with 0 for org/apache/commons/lang3/math/NumberUtils::toShort
+return defaultValue;","        try {
+            return Short.parseShort(str);
+        } catch (final RuntimeException e) {
+            return defaultValue;
+        }
+    }
+
+",random_seed_42,random
+MUT_0082,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,final boolean requestType = !Character.isDigit(lastChar) && lastChar != '.';,"// PIT Mutated: negated conditional
+final boolean requestType = !Character.isDigit(lastChar) && lastChar != '.';","        // if both e and E are present, this is caught by the checks on expPos (which prevent IOOBE)
+        // and the parsing which will detect if e or E appear in a number due to using the wrong offset
+        // Detect if the return type has been requested
+        final boolean requestType = !Character.isDigit(lastChar) && lastChar != '.';
+        if (decPos > -1) { // there is a decimal point
+            if (expPos > -1) { // there is an exponent
+                if (expPos <= decPos || expPos > length) { // prevents double exponent causing IOOBE
+",random_seed_42,random
+MUT_0358,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,ConditionalsBoundaryMutator,for (int j = 1; j < array.length; j++) {,"// PIT Mutated: changed conditional boundary
+for (int j = 1; j < array.length; j++) {","        validateArray(array);
+        // Finds and returns min
+        int min = array[0];
+        for (int j = 1; j < array.length; j++) {
+            if (array[j] < min) {
+                min = array[j];
+            }
+",random_seed_42,random
+MUT_0175,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (!CharUtils.isOctal(chars[i])) {,"// PIT Mutated: negated conditional
+if (!CharUtils.isOctal(chars[i])) {","                // leading 0, but not hex, must be octal
+                int i = start + 1;
+                for (; i < chars.length; i++) {
+                    if (!CharUtils.isOctal(chars[i])) {
+                        return false;
+                    }
+                }
+",random_seed_42,random
+MUT_0080,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int,"// PIT Mutated: negated conditional
+if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int","            if (hexDigits > 16 || hexDigits == 16 && firstSigDigit > '7') { // too many for Long
+                return createBigInteger(str);
+            }
+            if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                return createLong(str);
+            }
+            return createInteger(str);
+",random_seed_42,random
+MUT_0111,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,,,NegateConditionalsMutator,"if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {","// PIT Mutated: negated conditional
+if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {","        try {
+            final Float f = createFloat(str);
+            final Double d = createDouble(str);
+            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {
+                return f;
+            }
+            if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+",random_seed_42,random
+MUT_0391,commons-lang3,3.20.0,org.apache.commons.lang3.math.NumberUtils,toLong,,PrimitiveReturnsMutator,"return toLong(str, 0L);","// PIT Mutated: replaced long return with 0 for org/apache/commons/lang3/math/NumberUtils::toLong
+return toLong(str, 0L);","     * @since 2.1
+     */
+    public static long toLong(final String str) {
+        return toLong(str, 0L);
+    }
+
+    /**
+",random_seed_42,random
