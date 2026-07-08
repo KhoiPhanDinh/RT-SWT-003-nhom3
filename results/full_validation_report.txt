@@ -1,0 +1,7 @@
+Validation time: 2026-07-05T12:04:55
+Input file: D:\Khoi\Semester_5_SU26\SWT\LR\data\full_sample.csv
+Total rows: 50694
+Total columns: 10
+Columns: ['mutant_id', 'project', 'version', 'class_name', 'method_name', 'line_number', 'mutation_operator', 'original_code', 'mutated_code', 'surrounding_context']
+
+Status: VALID

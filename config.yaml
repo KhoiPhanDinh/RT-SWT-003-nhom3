@@ -1,0 +1,50 @@
+# LR Pipeline config for full experiment
+
+# LLM configuration
+model: "gpt-4o-mini"
+temperature: 0
+top_p: 1
+
+# Full run: call OpenAI API
+dry_run: false
+
+# Selection configuration
+top_percent: 10
+random_seed: 42
+
+# Checkpoint/resume
+resume_enabled: true
+checkpoint_file: "results/full_gpt_checkpoint.jsonl"
+
+# Only true if you want to rerun from zero
+reset_checkpoint: false
+
+# Select top 10% per (project, version, class_name) group to avoid
+# global tie-break on the coarse 1-5 GPT score starving the smaller
+# project (Math) of any selected mutants. See reselect_by_group.py.
+selection_scope: "by_group"
+group_columns:
+  - "project"
+  - "version"
+  - "class_name"
+
+# Full run batch size
+batch_size: 5
+
+# Input/output paths
+input_file: "data/full_sample.csv"
+fallback_input_file: "data/sample_mutant_pool.csv"
+prompt_file: "prompts/ranking_prompt.txt"
+
+gpt_ranking_output: "results/full_llm_output.csv"
+gpt_selected_output: "results/full_gpt_selected.csv"
+random_selected_output: "results/full_random_selected.csv"
+
+api_log_file: "results/full_api_log.txt"
+cost_log_file: "results/full_cost_log.csv"
+validation_log_file: "results/full_validation_report.txt"
+
+# Cost estimation config
+price_per_1m_input_usd: 0
+price_per_1m_output_usd: 0
+usd_to_vnd: 25000

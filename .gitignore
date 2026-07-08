@@ -1,0 +1,19 @@
+# API keys & secrets - TUYET DOI khong commit
+.env
+*.env
+secrets.json
+api_key.txt
+config.py
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+desktop.ini
+Thumbs.db
