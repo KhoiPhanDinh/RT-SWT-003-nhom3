@@ -1,1 +1,0 @@
-random_seed=42, top_percent=10.0, selected=508, input=5078
