@@ -1,4 +1,7 @@
-subset,n_group,n_pairs,n_nonzero_pairs,mean_ms_gpt,mean_ms_random,median_ms_gpt,median_ms_random,win_gpt,win_random,tie,p_value,effect_size_rank_biserial,ran_test,reason_skipped
-RQ1_pooled_all_projects,757,757,256,0.8342681130317898,0.7791537387103532,1.0,1.0,180,76,501,1.734308992764016e-09,0.4254924610894942,True,
-RQ1_subgroup_Lang,739,739,245,0.8342794087303226,0.7778956083172772,1.0,1.0,173,72,494,1.6332597895762313e-09,0.43560643769703006,True,
-RQ1_subgroup_Math,18,18,11,0.8338043618531423,0.8308069809594198,0.9041666666666667,0.861904761904762,7,4,7,0.344469026401932,0.13636363636363635,True,
+comparison,gpt_mutation_score,random_mutation_score,diff,n_pairs,wilcoxon_p_value,note
+GPT_vs_RANDOM_seed123_overall,0.7255434782608695,0.6766304347826086,0.048913043478260865,,,overall selected-set comparison
+GPT_vs_RANDOM_seed2026_overall,0.7255434782608695,0.657608695652174,0.06793478260869557,,,overall selected-set comparison
+GPT_vs_RANDOM_seed42_overall,0.7255434782608695,0.6721014492753623,0.053442028985507206,,,overall selected-set comparison
+GPT_vs_RANDOM_seed123_project_version,,,0.056305341539175276,30,,scipy unavailable
+GPT_vs_RANDOM_seed2026_project_version,,,0.07819882896789761,29,,scipy unavailable
+GPT_vs_RANDOM_seed42_project_version,,,0.0778553583293359,30,,scipy unavailable

@@ -1,74 +1,95 @@
-"""Gate E3 smoke test: 1 API call to confirm GPT4o-mini config works end to end.
+from pathlib import Path
+import pandas as pd
+import yaml
 
-Usage:
-    python scripts/test_api.py
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
 
-Requires OPENAI_API_KEY in .env (see utils.load_env). Does not touch any
-checkpoint/results file used by the real pipeline.
-"""
-from __future__ import annotations
+sample_path = ROOT / CONFIG["data"]["sample_path"]
+gt_path = ROOT / CONFIG["data"]["ground_truth_path"]
 
-import os
-import sys
+required_sample = [
+    "mutant_id", "project", "version", "class_name", "method_name",
+    "line_number", "mutation_operator", "original_code",
+    "mutated_code", "surrounding_context",
+]
 
-from utils import load_config, load_env
+print("=" * 60)
+print("CHECK FULL DATA")
+print("=" * 60)
 
+if not sample_path.exists():
+    raise FileNotFoundError(f"Missing sample file: {sample_path}")
 
-SAMPLE_MUTANT = {
-    "mutant_id": "TEST_0",
-    "project": "Lang",
-    "version": "1f",
-    "class_name": "org.apache.commons.lang3.StringUtils",
-    "method_name": "isEmpty",
-    "line_number": 100,
-    "mutation_operator": "NegateConditionalsMutator",
-    "original_code": "if (str == null || str.length() == 0) { return true; }",
-    "mutated_code": "if (str == null && str.length() == 0) { return true; }",
-    "surrounding_context": "public static boolean isEmpty(CharSequence str) { ... }",
-}
+sample = pd.read_csv(sample_path)
+print("sample_path:", sample_path)
+print("sample shape:", sample.shape)
 
+missing_cols = [c for c in required_sample if c not in sample.columns]
+if missing_cols:
+    raise ValueError(f"Missing sample columns: {missing_cols}")
 
-def main() -> int:
-    cfg = load_config()
-    load_env()
+print("\nProject counts:")
+print(sample["project"].value_counts())
 
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("[ERROR] OPENAI_API_KEY not found. Create .env with OPENAI_API_KEY=... first.")
-        return 1
+print("\nProject/version counts:")
+print(sample.groupby(["project", "version"]).size())
 
-    from openai import OpenAI
+print("\nDuplicate mutant_id:", int(sample["mutant_id"].duplicated().sum()))
 
-    client = OpenAI(api_key=api_key)
+print("\nEmpty required sample fields:")
+for c in required_sample:
+    empty = int(sample[c].isna().sum() + (sample[c].astype(str).str.strip() == "").sum())
+    print(f"{c}: {empty}")
 
-    prompt_path_text = (
-        "You are given a list of Java mutants. Each mutant includes a mutant ID, "
-        "mutation operator, original code, mutated code, and surrounding code context.\n\n"
-        "Your task is to rank the mutants by usefulness for mutation testing.\n\n"
-        "For each mutant, return: mutant_id, usefulness_score (1-5), short_reason.\n"
-        "Return the final answer as a JSON array.\n\n"
-        f"Mutants to rank:\n{[SAMPLE_MUTANT]}"
-    )
+if gt_path.exists():
+    gt = pd.read_csv(gt_path)
+    print("\nground_truth_path:", gt_path)
+    print("ground truth shape:", gt.shape)
+    print("Duplicate ground_truth mutant_id:", int(gt["mutant_id"].duplicated().sum()))
 
-    response = client.chat.completions.create(
-        model=cfg["model"],
-        temperature=float(cfg.get("temperature", 0)),
-        top_p=float(cfg.get("top_p", 1)),
-        messages=[
-            {"role": "system", "content": "You are a careful mutation testing research assistant. Return valid JSON only."},
-            {"role": "user", "content": prompt_path_text},
-        ],
-    )
+    sample_ids = set(sample["mutant_id"].astype(str))
+    gt_ids = set(gt["mutant_id"].astype(str))
+    print("sample not in ground truth:", len(sample_ids - gt_ids))
+    print("ground truth not in sample:", len(gt_ids - sample_ids))
 
-    content = response.choices[0].message.content
-    print("=== Gate E3: single API call test ===")
-    print("model:", cfg["model"])
-    print("usage:", response.usage)
-    print("raw response:")
-    print(content)
-    print("\n[OK] API call succeeded. Gate E3 passed.")
-    return 0
+    if "status" in gt.columns:
+        print("\nStatus counts:")
+        print(gt["status"].value_counts(dropna=False))
 
+        # Per-project health check. A global status count hides a project whose
+        # PIT run produced no coverage at all: Codec came back 2317/2317
+        # NO_COVERAGE (test suite never executed, likely a source-layout
+        # mismatch) and that was invisible in the global totals above.
+        print("\nPer-project status health:")
+        problems = []
+        for proj, g in gt.groupby("project"):
+            killed = int((g["status"].astype(str).str.upper() == "KILLED").sum())
+            no_cov = int((g["status"].astype(str).str.upper() == "NO_COVERAGE").sum())
+            n = len(g)
+            flag = ""
+            if killed == 0:
+                flag = "  <-- FAIL: no killed mutants at all"
+                problems.append(f"{proj}: 0/{n} killed")
+            elif no_cov / n > 0.50:
+                flag = "  <-- WARN: >50% NO_COVERAGE"
+                problems.append(f"{proj}: {no_cov}/{n} NO_COVERAGE")
+            print(f"  {proj:<14} killed={killed:>6}/{n:<6} ({killed/n:6.1%})"
+                  f"  NO_COVERAGE={no_cov:>6} ({no_cov/n:5.1%}){flag}")
 
-if __name__ == "__main__":
-    sys.exit(main())
+        if problems:
+            print("\n" + "!" * 60)
+            print("GROUND TRUTH LOOKS BROKEN FOR:")
+            for p in problems:
+                print(f"  - {p}")
+            print("Do NOT compute metrics on these projects until PIT is re-run.")
+            print("!" * 60)
+
+    if "killed" in gt.columns:
+        print("\nKilled counts:")
+        print(gt["killed"].value_counts(dropna=False))
+else:
+    print("\nWARNING: full_ground_truth.csv is missing.")
+    print("You can run LLM ranking with full_sample.csv, but metric computation needs full_ground_truth.csv.")
+
+print("\nDATA CHECK DONE")
