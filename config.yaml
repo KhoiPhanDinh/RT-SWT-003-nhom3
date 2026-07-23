@@ -1,0 +1,29 @@
+data:
+  sample_path: data/full_sample.csv
+  ground_truth_path: data/full_ground_truth.csv
+
+output:
+  results_dir: results
+  logs_dir: logs
+
+llm:
+  model: gpt-4o-mini-2024-07-18
+  dry_run: false
+  batch_size: 8
+  temperature: 0
+  max_retries: 4
+  request_timeout_seconds: 60
+
+checkpoint:
+  enabled: true
+  resume: true
+  path: logs/full_gpt_checkpoint.jsonl
+  save_every_batch: true
+  api_log_path: logs/full_api_log.csv
+
+selection:
+  fraction: 0.10
+  min_k: 1
+
+random:
+  seeds: [42, 123, 2026]

@@ -1,0 +1,38 @@
+# === BAO MAT: khong bao gio commit khoa API ===
+.env
+.env.*
+!.env.example
+*.key
+secrets.*
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# === Runtime logs / checkpoint ===
+logs/
+*.log
+
+# === File khong dung trong final ===
+data/full_ground_truth_BROKEN_codec_nocoverage.csv
+results/*bygroup*
+results/full_paired_by_class.csv
+results/paired_mutation_scores.csv
+results/summary.csv
+
+# === Bang chung PIT tho / output nang ===
+codec_f1.txt
+codec_1f_pit_cli_failed_evidence/
+codec_pit_cli_junit4_fix_full10_outputs/
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

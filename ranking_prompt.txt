@@ -1,0 +1,15 @@
+You are ranking Java PIT mutants for mutation testing.
+
+For each mutant, assign:
+- score: integer from 1 to 5
+  5 = highly valuable mutant, likely semantically meaningful and useful for testing
+  4 = useful mutant
+  3 = moderate mutant
+  2 = weak mutant
+  1 = low-value or trivial mutant
+- confidence: integer from 1 to 5
+- rationale: short reason, maximum 18 words
+
+Return JSON array only.
+Each object must contain:
+mutant_id, score, confidence, rationale
