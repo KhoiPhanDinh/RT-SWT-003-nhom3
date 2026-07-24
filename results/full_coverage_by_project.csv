@@ -1,4 +1,0 @@
-project,ground_truth_pool,llm_output_pool,gpt_selected,random_selected,gpt_selected_pct_of_pool,random_selected_pct_of_pool
-Codec,2317,2317,237,237,10.228744065602072,10.228744065602072
-Csv,603,603,64,64,10.613598673300165,10.613598673300165
-JacksonCore,8120,8120,818,818,10.073891625615763,10.073891625615763
