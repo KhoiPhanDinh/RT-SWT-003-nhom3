@@ -1,0 +1,4 @@
+analysis,n,median_dMS,wilcoxon_p,r_rb,wins,losses,ties,verdict,gpt_ms,random_ms,diff,z,p_one_sided,random_mean,random_sd,p_empirical
+pre_register_seed42_group,37.0,0.0,0.05913203248161014,0.3504273504273504,17.0,9.0,11.0,NO_SUPPORT,,,,,,,,
+mutant_weighted_seed42,,,,,,,,SUPPORT,0.7158176943699732,0.6702412868632708,0.04557640750670244,2.337308022651182,0.009711586848448306,,,
+monte_carlo_5000,,,,,,,,SUPPORT,0.7158176943699732,,,3.640864233260575,,0.6700289544235924,0.012576338202365398,0.0002
