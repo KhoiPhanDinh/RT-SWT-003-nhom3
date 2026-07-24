@@ -1,0 +1,16 @@
+1.6 Xác định Lỗ hổng nghiên cứu (Research Gap)
+
+1. Tình trạng nghiên cứu hiện tại (Current State):
+Qua quá trình rà soát tài liệu (SLR), kết quả cho thấy trí tuệ nhân tạo (AI/Deep Learning) đã bắt đầu được ứng dụng vào Mutation Testing cho ngôn ngữ Java nhằm giải quyết bài toán chi phí (Cost-effectiveness). Các mô hình như Keras, RNN, MLP, hoặc CodeBERT (uBERT) đã được chứng minh là có khả năng dự đoán mutant "sống/chết" (alive/killed) với độ chính xác cao (lên tới 93%) và tối ưu hóa việc chọn lọc các mutant có giá trị.
+
+2. Các hạn chế còn tồn đọng (Limitations):
+Tuy nhiên, các nghiên cứu hiện tại (tiêu biểu như Bài ID 1 và ID 19) vẫn bộc lộ những điểm yếu cốt lõi:
+- Phụ thuộc vào công cụ cũ: Quá trình sinh ra mutant ban đầu vẫn phải dựa dẫm vào các công cụ truyền thống (như MuJava), AI chỉ đóng vai trò chọn lọc hoặc dự đoán sau đó.
+- Hạn chế trong phân tích cấu trúc: Các mô hình Deep Learning sử dụng đồ thị phụ thuộc chương trình (PDG) đang gặp khó khăn khi phân tích các đoạn mã Java phức tạp có chứa lệnh gọi hàm ẩn (unknown method calls).
+- Thiếu tính tự động hóa toàn trình: Chất lượng đầu ra vẫn phụ thuộc rất nhiều vào các chiến lược chọn lọc mutant (mutant selection strategies) được cài đặt sẵn.
+
+3. Lỗ hổng nghiên cứu (Research Gap):
+Mặc dù AI và Deep Learning truyền thống đã được áp dụng, nhưng chưa có nghiên cứu nào đánh giá toàn diện việc sử dụng trực tiếp các Mô hình Ngôn ngữ Lớn (LLMs) thế hệ mới (như GPT-4, Claude, hay Gemini) để tự động hóa toàn bộ quy trình sinh và kiểm thử đột biến (Mutation Testing) trên mã nguồn Java. Việc ứng dụng LLMs có tiềm năng hiểu ngữ cảnh mã nguồn sâu hơn, giúp khắc phục nhược điểm phân tích PDG và loại bỏ sự phụ thuộc vào các công cụ sinh mutant truyền thống.
+
+4. Đề xuất hướng nghiên cứu của nhóm (Proposed Direction):
+Từ lỗ hổng trên, nghiên cứu tiếp theo của nhóm sẽ tập trung vào việc: Khảo sát và đánh giá hiệu quả của các Mô hình LLMs hiện đại trong việc tự động sinh các mutant chất lượng cao trên các dự án Java thực tế, đồng thời so sánh hiệu năng của chúng với các phương pháp cũ.

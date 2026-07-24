@@ -1,0 +1,6 @@
+"ID","Author","Title","Publiccation_year","venue","Search_String","v1_decision","v1_reason","v2_decision","v2_reason"
+"1","Arghavan Moradi Dakhel et al.","Effective Test Generation Using Pre-trained Large Language Models and Mutation Testing","2023","PDF","String 1","INCLUDE","","INCLUDE","Pass full-text screening"
+"2","Muhammad Hassan et al.","LLM-Guided Formal Verification Coupled with Mutation Testing","2024","PDF","String 1","INCLUDE","","INCLUDE","Pass full-text screening"
+"3","Lei Ma et al.","DeepMutation: Mutation Testing of Deep Learning Systems","2018","PDF","String 1","INCLUDE","","INCLUDE","Pass full-text screening"
+"4","Nargiz Humbatova et al.","DeepCrime: mutation testing of deep learning systems based on real faults","2021","PDF","String 1","INCLUDE","","INCLUDE","Pass full-text screening"
+"5","Qiang Hu et al.","DeepMutation++: A Mutation Testing Framework for Deep Learning Systems","2019","PDF","String 1","INCLUDE","","INCLUDE","Pass full-text screening"
