@@ -1,0 +1,313 @@
+% ============================================================================
+% references.bib — SWT_EX paper (RBL-5)
+% An Empirical Evaluation of GPT-4o mini for Mutant Selection versus Random
+% Selection: A Study on Defects4J Codec, Csv, and JacksonCore
+%
+% Ke thua tu Presentation/references.bib (RT-SWT-003 Nhom 3) — metadata trich
+% truc tiep tu PDF trong finalPapers/ va evidence-table-merged-final.md.
+% KHONG co entry bia. Moi entry co doi hoac url (yeu cau RBL-5).
+% Key format: {tacgia}{nam}{tukhoa} — vi du: \cite{jimenez2018naturalness}
+%
+% Entry MOI so voi ban goc (danh dau [NEW]):
+%   - arcuri2011practical  (RBL-5 §3.4 yeu cau cite paper SE dung Wilcoxon)
+%   - openai2024gpt4omini  (model card GPT-4o mini — cite trong §3.2)
+% ============================================================================
+
+
+% ============================================================================
+% DATASET & TOOL — cite trong §3.1 Dataset (BAT BUOC theo RBL-5)
+% ============================================================================
+
+% NOTE: Entry lay tu metadata cong bo chinh thuc ISSTA 2014.
+% Kiem tra lai tren dl.acm.org truoc khi nop.
+@inproceedings{just2014defects4j,
+  title     = {Defects4J: A Database of Existing Faults to Enable Controlled Testing Studies for {Java} Programs},
+  author    = {Just, Ren{\'e} and Jalali, Darioush and Ernst, Michael D.},
+  booktitle = {Proceedings of the 2014 International Symposium on Software Testing and Analysis (ISSTA)},
+  pages     = {437--440},
+  year      = {2014},
+  publisher = {ACM},
+  doi       = {10.1145/2610384.2628055}
+}
+
+% NOTE: Coles et al. (2016) la paper cong bo chinh thuc cua PIT.
+% Kiem tra lai DOI truoc khi nop.
+@inproceedings{coles2016pit,
+  title     = {{PIT}: A Practical Mutation Testing Tool for {Java} (Demo)},
+  author    = {Coles, Henry and Laurent, Thomas and Henard, Christopher and Papadakis, Mike and Ventresque, Anthony},
+  booktitle = {Proceedings of the 25th International Symposium on Software Testing and Analysis (ISSTA)},
+  pages     = {449--452},
+  year      = {2016},
+  publisher = {ACM},
+  doi       = {10.1145/2931037.2948707},
+  url       = {https://pitest.org}
+}
+
+% [NEW] Model dung trong §3.2. Cite bang URL cong bo chinh thuc cua OpenAI
+% (RBL-5 cho phep entry co url; day KHONG phai blog ca nhan ma la model
+% documentation cua nha phat hanh). NOTE: kiem tra URL con song truoc khi nop.
+@misc{openai2024gpt4omini,
+  title        = {{GPT-4o mini}: Advancing Cost-Efficient Intelligence},
+  author       = {{OpenAI}},
+  year         = {2024},
+  howpublished = {OpenAI product documentation},
+  note         = {Model version \texttt{gpt-4o-mini-2024-07-18}},
+  url          = {https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/}
+}
+
+% Nguon nguong effect size r_rb >= 0.30 (medium) dung o §3.4.
+@book{cohen1988statistical,
+  title     = {Statistical Power Analysis for the Behavioral Sciences},
+  author    = {Cohen, Jacob},
+  edition   = {2nd},
+  year      = {1988},
+  publisher = {Lawrence Erlbaum Associates},
+  address   = {Hillsdale, NJ},
+  isbn      = {978-0805802832}
+}
+
+% [NEW] RBL-5 §3.4 yeu cau: "cite 1 paper SE dung test nay (vi du: Arcuri &
+% Briand 2011 cho Wilcoxon)". Day la paper huong dan kinh dien ve statistical
+% test cho randomized algorithm trong SE. NOTE: DOI lay tu ACM DL cua ICSE'11
+% — kiem tra lai tren dl.acm.org truoc khi nop.
+@inproceedings{arcuri2011practical,
+  title     = {A Practical Guide for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering},
+  author    = {Arcuri, Andrea and Briand, Lionel},
+  booktitle = {Proceedings of the 33rd International Conference on Software Engineering (ICSE)},
+  pages     = {1--10},
+  year      = {2011},
+  publisher = {ACM},
+  doi       = {10.1145/1985793.1985795}
+}
+
+
+% ============================================================================
+% §2.1 — LLM TRONG MUTATION TESTING (generation & filtering)
+% ============================================================================
+
+% NOTE: DOI trong PDF la placeholder. Dung arXiv lam nguon on dinh.
+% Kiem tra DOI chinh thuc tren dl.acm.org truoc khi nop.
+@article{wang2025comprehensive,
+  title   = {A Comprehensive Study on Large Language Models for Mutation Testing},
+  author  = {Wang, Bo and Chen, Mingda and Deng, Ming and Lin, Youfang and Harman, Mark and Papadakis, Mike and Zhang, Jie M.},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  year    = {2025},
+  note    = {To appear},
+  url     = {https://arxiv.org/abs/2406.09843}
+}
+
+% NOTE: Preprint, chua co DOI. Cap nhat khi publish chinh thuc.
+@misc{wang2026smart,
+  title        = {Boosting {LLMs} for Mutation Generation},
+  author       = {Wang, Bo and Deng, Ming and Chen, Mingda and Yang, Chengran and Lin, Youfang and Harman, Mark and Papadakis, Mike and Zhang, Jie M.},
+  year         = {2026},
+  howpublished = {arXiv preprint},
+  note         = {Preprint},
+  url          = {https://arxiv.org/abs/2507.08036}
+}
+
+@article{tip2025llmorpheus,
+  title   = {{LLMorpheus}: Mutation Testing Using Large Language Models},
+  author  = {Tip, Frank and Bell, Jonathan and Sch{\"a}fer, Max},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {2025},
+  doi     = {10.1109/TSE.2025.3567961},
+  url     = {https://arxiv.org/abs/2404.09952}
+}
+
+@inproceedings{tian2024equivalent,
+  title     = {Large Language Models for Equivalent Mutant Detection: How Far Are We?},
+  author    = {Tian, Zhao and Shu, Honglin and Wang, Dong and Cao, Xuejie and Kamei, Yasutaka and Chen, Junjie},
+  booktitle = {Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)},
+  pages     = {1733--1745},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3650212.3680395}
+}
+
+% NOTE: PDF khong ghi DOI. Dung link tac gia cong bo.
+@article{tanhaei2025gemllm,
+  title   = {{GEM-LLM}: Identifying Contextual Equivalent Mutants via Large Language Models; A Global Invariant-Based Approach},
+  author  = {Tanhaei, Mohammad and Alizadehsani, Roohallah},
+  journal = {Intelligent Systems with Applications},
+  year    = {2025},
+  url     = {https://github.com/tanhaei/GEM-LLM}
+}
+
+@inproceedings{foster2025ach,
+  title     = {Mutation-Guided {LLM}-based Test Generation at {Meta}},
+  author    = {Foster, Christopher and Gulati, Abhishek and Harman, Mark and Harper, Inna and Mao, Ke and Ritchey, Jillian and Robert, Herv{\'e} and Sengupta, Shubho},
+  booktitle = {Companion Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering (FSE Companion)},
+  year      = {2025},
+  publisher = {ACM},
+  doi       = {10.1145/3696630.3728544}
+}
+
+@article{dakhel2024mutap,
+  title   = {Effective Test Generation Using Pre-trained Large Language Models and Mutation Testing},
+  author  = {Dakhel, Arghavan Moradi and Nikanjam, Amin and Majdinasab, Vahid and Khomh, Foutse and Desmarais, Michel C.},
+  journal = {Information and Software Technology},
+  volume  = {171},
+  pages   = {107468},
+  year    = {2024},
+  doi     = {10.1016/j.infsof.2024.107468},
+  url     = {https://arxiv.org/abs/2308.16557}
+}
+
+
+% ============================================================================
+% §2.2 — PREDICTIVE MUTATION TESTING & SELECTIVE MUTATION
+% ============================================================================
+
+@article{garg2023cerebro,
+  title   = {Cerebro: Static Subsuming Mutant Selection},
+  author  = {Garg, Aayush and Ojdanic, Milos and Degiovanni, Renzo and Chekam, Thierry Titcheu and Papadakis, Mike and Le Traon, Yves},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {49},
+  number  = {5},
+  pages   = {2821--2835},
+  year    = {2023},
+  doi     = {10.1109/TSE.2022.3223297}
+}
+
+@inproceedings{tian2022leam,
+  title     = {Learning to Construct Better Mutation Faults},
+  author    = {Tian, Zhao and Chen, Junjie and Zhu, Qihao and Yang, Junjie and Zhang, Lingming},
+  booktitle = {Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},
+  year      = {2022},
+  publisher = {ACM},
+  doi       = {10.1145/3551349.3556949}
+}
+
+@article{tian2025leamplusplus,
+  title   = {{LEAM++}: Learning for Selective Mutation Fault Construction},
+  author  = {Tian, Zhao and Chen, Junjie and Wang, Dong and Zhu, Qihao and Fan, Xingyu and Zhang, Lingming},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  year    = {2025},
+  doi     = {10.1145/3725528}
+}
+
+@article{kim2022seshat,
+  title   = {Predictive Mutation Analysis via the Natural Language Channel in Source Code},
+  author  = {Kim, Jinhan and Jeon, Juyoung and Hong, Shin and Yoo, Shin},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  volume  = {31},
+  number  = {4},
+  pages   = {1--27},
+  year    = {2022},
+  doi     = {10.1145/3510417}
+}
+
+@inproceedings{jain2023mutationbert,
+  title     = {Contextual Predictive Mutation Testing},
+  author    = {Jain, Kush and Alon, Uri and Groce, Alex and Le Goues, Claire},
+  booktitle = {Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)},
+  year      = {2023},
+  publisher = {ACM},
+  doi       = {10.1145/3611643.3616289}
+}
+
+@inproceedings{zhao2024soda,
+  title     = {Spotting Code Mutation for Predictive Mutation Testing},
+  author    = {Zhao, Yifan and Chen, Yizhou and Sun, Zeyu and Liang, Qingyuan and Wang, Guoqing and Hao, Dan},
+  booktitle = {Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering (ASE)},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3691620.3695491}
+}
+
+@inproceedings{ma2021mudelta,
+  title     = {{MuDelta}: Delta-Oriented Mutation Testing at Commit Time},
+  author    = {Ma, Wei and Chekam, Thierry Titcheu and Papadakis, Mike and Harman, Mark},
+  booktitle = {Proceedings of the 43rd International Conference on Software Engineering (ICSE)},
+  pages     = {897--909},
+  year      = {2021},
+  publisher = {IEEE},
+  doi       = {10.1109/ICSE43902.2021.00086}
+}
+
+@article{delgadoperez2026pitfalls,
+  title   = {Methodological Pitfalls in Predictive Mutation Testing: Threats, Impact and Open Challenges},
+  author  = {Delgado-P{\'e}rez, Pedro and Balderas-D{\'i}az, Sara and Medina-Bulo, Inmaculada},
+  journal = {Automated Software Engineering},
+  volume  = {33},
+  number  = {84},
+  year    = {2026},
+  doi     = {10.1007/s10515-026-00626-9}
+}
+
+
+% ============================================================================
+% §2.3 — SELECTION SO VOI RANDOM BASELINE
+% ============================================================================
+
+% *** QUAN TRONG: paper nen tang nhat cua bai — nguon cho paired unit
+% *** (project/version/class), Wilcoxon signed-rank, va nguong effect size.
+@inproceedings{jimenez2018naturalness,
+  title     = {Are Mutants Really Natural? A Study on How ``Naturalness'' Helps Mutant Selection},
+  author    = {Jimenez, Matthieu and Checkam, Thierry Titcheu and Cordy, Maxime and Papadakis, Mike and Kintis, Marinos and Le Traon, Yves and Harman, Mark},
+  booktitle = {Proceedings of the 12th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)},
+  pages     = {1--10},
+  year      = {2018},
+  publisher = {ACM},
+  doi       = {10.1145/3239235.3240500}
+}
+
+@inproceedings{bouafif2025primg,
+  title     = {{PRIMG}: Efficient {LLM}-Driven Test Generation Using Mutant Prioritization},
+  author    = {Bouafif, Mohamed Salah and Hamdaqa, Mohammad and Zulkoski, Edward},
+  booktitle = {Proceedings of the 29th International Conference on Evaluation and Assessment in Software Engineering (EASE)},
+  year      = {2025},
+  publisher = {ACM},
+  url       = {https://arxiv.org/abs/2411.08254}
+}
+
+@article{guizzo2022sentinel,
+  title   = {Sentinel: A Hyper-Heuristic for the Generation of Mutant Reduction Strategies},
+  author  = {Guizzo, Giovani and Sarro, Federica and Krinke, Jens and Vergilio, Silvia R.},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {48},
+  number  = {3},
+  pages   = {803--818},
+  year    = {2022},
+  doi     = {10.1109/TSE.2020.3002496}
+}
+
+@inproceedings{pitts2022random,
+  title     = {Random Mutant Selection and Equivalent Mutants Revisited},
+  author    = {Pitts, Rowland},
+  booktitle = {Proceedings of the IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW)},
+  year      = {2022},
+  publisher = {IEEE},
+  doi       = {10.1109/ICSTW55395.2022.00025}
+}
+
+@inproceedings{zhang2019empirical,
+  title     = {An Empirical Comparison of Mutant Selection Assessment Metrics},
+  author    = {Zhang, Jie M. and Zhang, Lingming and Hao, Dan and Zhang, Lu and Harman, Mark},
+  booktitle = {Proceedings of the IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW)},
+  year      = {2019},
+  publisher = {IEEE},
+  doi       = {10.1109/ICSTW.2019.00047}
+}
+
+% *** Nguon cho mutant budget top 10% dung o §3.2/§3.3.
+@inproceedings{borsi2025alpmt,
+  title     = {Using Active Learning to Train Predictive Mutation Testing with Minimal Data},
+  author    = {Borsi, Mikl{\'o}s},
+  booktitle = {Proceedings of the 40th IEEE/ACM International Conference on Automated Software Engineering (ASE)},
+  year      = {2025},
+  publisher = {IEEE},
+  doi       = {10.1109/ASE63991.2025.00217}
+}
+
+@article{ojdanic2023evolving,
+  title   = {Mutation Testing in Evolving Systems: Studying the Relevance of Mutants to Code Evolution},
+  author  = {Ojdanic, Milos and Soremekun, Ezekiel and Degiovanni, Renzo and Papadakis, Mike and Le Traon, Yves},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  volume  = {32},
+  number  = {1},
+  pages   = {1--39},
+  year    = {2023},
+  doi     = {10.1145/3530786}
+}
