@@ -1,0 +1,62 @@
+id,title,authors,year,venue,search_strings,v1_decision,v1_reason,v2_decision,v2_reason
+1,On Comparing Mutation Testing Tools through Learning-based Mutant Selection,M. Ojdanic et al.,2023,IEEE/ACM AST,String A,INCLUDE,on-topic (I),Include,"Abstract reports learning-based selection -> +12% fault detection. WARNING: abstract-only, full-text not read"
+2,DeepCrime: from Real Faults to Mutation Testing Tool for Deep Learning,N. Humbatova et al.,2023,ICSE-Companion,String A; String C,EXCLUDE,EC4,,
+3,Mutation Testing Reinvented: How Artificial Intelligence Complements Classic Methods,S. Uzunbayir; K. Kurtel,2024,UBMK,String A,EXCLUDE,IC5,,
+4,What Are We Really Testing in Mutation Testing for Machine Learning? A Critical Reflection,A. Panichella; C. C. S. Liem,2021,ICSE-NIER,String A,EXCLUDE,EC4,,
+5,An Experimental Tool for Search-Based Mutation Testing,M. B. Bashir; A. Nadeem,2018,FIT,String A; String C,EXCLUDE,EC4,,
+6,An Extensive Study on Cross-Project Predictive Mutation Testing,D. Mao; L. Chen; L. Zhang,2019,ICST,String A,INCLUDE,on-topic (I),Include,"Abstract: PMT, 654 projects, >0.85 accuracy, 28.7x speed-up. WARNING: abstract-only, full-text not read; project mix is not Java-only"
+7,Cerebro: Static Subsuming Mutant Selection,A. Garg et al.,2023,IEEE TSE,String A; String B,INCLUDE,on-topic (I),Include,"Abstract: 48 C + 10 Java programs, 68% fewer equivalent mutants, 90% fewer executions, 2x more subsuming mutants killed vs baselines incl. random. WARNING: abstract-only"
+8,Mutant Selection Strategies in Mutation Testing,R. Pitts,2023,ICCQ,String A; String B,INCLUDE,on-topic (C),EXCLUDE,EC2 (Access): Unable to load full-text.
+9,Learning-based Mutant Reduction Using Fine-grained Mutation Operators,Y. Kim; S. Hong,2022,ICST,String A,EXCLUDE,EC3,,
+10,DeepMutation++: A Mutation Testing Framework for Deep Learning Systems,Q. Hu et al.,2019,ASE,String A,EXCLUDE,EC4,,
+11,On the implementation of search based approach to mutation testing,M. Tuloli et al.,2017,ICoDSE,String A; String C,EXCLUDE,IC2,,
+12,Manifesting Bugs in Machine Learning Code: An Explorative Study with Mutation Testing,D. Cheng et al.,2018,QRS,String A,EXCLUDE,EC4,,
+13,TF-DM: Tool for Studying ML Model Resilience to Data Faults,N. Narayanan; K. Pattabiraman,2021,DeepTest,String A,EXCLUDE,EC4,,
+14,State of art in the field of Search-based Mutation Testing,N. Jatana et al.,2015,ICRITO,String A,EXCLUDE,IC2,,
+15,EvoSuite at the SBST 2019 Tool Competition,J. Campos et al.,2019,SBST,String A,EXCLUDE,EC4,,
+16,EvoSuite at the SBST 2018 Tool Competition,G. Fraser et al.,2018,SBST,String A,EXCLUDE,EC4,,
+17,EvoSuite at the SBST 2015 Tool Competition,G. Fraser; A. Arcuri,2015,SBST,String A,EXCLUDE,IC2,,
+18,Automated Search for Good Coverage Criteria: Moving from Code Coverage to Fault Coverage through Search-Based Software Engineering,P. McMinn et al.,2016,SBST,String A,EXCLUDE,IC2,,
+19,Scalable Mutation Testing Using Predictive Analysis of Deep Learning Model,M. R. Naeem et al.,2019,IEEE Access,String A,INCLUDE,on-topic (I),Include,Abstract: Keras model predicts killed/alive on 5 Java (Eclipse JDT) programs; 'slight loss of accuracy'. WARNING: abstract-only; no single accuracy/speed number stated in abstract
+20,Mutation Testing of Deep Reinforcement Learning Based on Real Faults,F. Tambon et al.,2023,ICST,String A,EXCLUDE,EC4,,
+21,EvoSuite at the SBST 2016 Tool Competition,G. Fraser; A. Arcuri,2016,SBST,String A,EXCLUDE,IC2,,
+22,DeepWeak: Weak Mutation Testing for Deep Learning Systems,Y. Xue et al.,2024,QRS,String A,EXCLUDE,EC4,,
+23,Sentinel: A Hyper-Heuristic for the Generation of Mutant Reduction Strategies,G. Guizzo et al.,2022,IEEE TSE,String A; String B,INCLUDE,on-topic (I),Include,"Abstract: 40 releases of 10 Java systems, 4800 experiments, beats baseline in 95% (large effect), beats SOTA in 88%, no mutation-score loss. WARNING: abstract-only"
+24,DeepMutation: Mutation Testing of Deep Learning Systems,L. Ma et al.,2018,ISSRE,String A,EXCLUDE,EC4,,
+25,Inferring Automatic Test Oracles,W. B. Langdon et al.,2017,SBST,String A,EXCLUDE,IC2,,
+26,mrstudyr: Retrospectively Studying the Effectiveness of Mutant Reduction Techniques,C. J. McCurdy et al.,2016,ICSME,String B,EXCLUDE,IC2,,
+27,Quasi-Dominators and Random Selection in Mutation Testing,R. Pitts,2022,ICCQ,String B,INCLUDE,on-topic (C),EXCLUDE,EC2 (Access): Unable to load full-text.
+28,Is operator-based mutant selection superior to random mutant selection?,L. Zhang et al.,2010,ICSE,String B,EXCLUDE,IC2,,
+29,Operator-based and random mutant selection: Better together,L. Zhang et al.,2013,ASE,String B,EXCLUDE,IC2,,
+30,An Empirical Comparison of Mutant Selection Assessment Metrics,J. M. Zhang et al.,2019,ICSTW,String B,INCLUDE,on-topic,Include,"Abstract: 104 projects, >600k LOC; two metric families strongly correlated (R2=0.8622 avg). WARNING: abstract-only"
+31,Random Mutant Selection and Equivalent Mutants Revisited,R. Pitts,2022,ICSTW,String B,INCLUDE,on-topic (C),Include,Abstract: equivalent-mutant selection probability quickly overwhelms other selections. WARNING: abstract-only; confirm corpus/language
+32,MQP: Mutants Quality Prediction for Cost-Effective Mutation Testing,X. Wang et al.,2021,QRS-C,String B,INCLUDE,on-topic (I),Include,
+33,Prioritizing Mutants to Guide Mutation Testing,S. J. Kaufman et al.,2022,ICSE,String B,INCLUDE,on-topic (I),EXCLUDE,"EC4 violation (Using pure mathematical/probability formulas, not AI/ML/Search-based)"
+34,Poster: Predicting the Fault Revelation Utility of Mutants,T. T. Chekam et al.,2018,ICSE-Companion,String B,EXCLUDE,EC3,,
+35,Using Fourier Analysis and Mutant Clustering to Accelerate DNN Mutation Testing,A. Ghanbari; S. Tavakkol,2025,ASE,String B,EXCLUDE,EC4,,
+36,Optimal Second-Order Mutants Reduction Based on MOEA/D,J. Liu; Z. Wang,2023,QRS-C,String B,INCLUDE,on-topic (I),EXCLUDE,EC2 (Access): Unable to load full-text.
+37,Using a swarm to detect hard-to-kill mutants,A. Ibias; M. Nunez,2020,SMC,String B,INCLUDE,on-topic (I),Include,Abstract: swarm-intelligence algorithm classifies hard-to-kill vs easy-to-kill mutants. WARNING: abstract-only; no comparative % in abstract
+38,Enabling Efficient Assertion Inference,A. Garg et al.,2023,ISSRE,String B,INCLUDE,on-topic (I),EXCLUDE,EC2 (Access): Unable to load full-text.
+39,Growing a Reduced Set of Mutation Operators,M. E. Delamaro et al.,2014,SBES,String B,EXCLUDE,IC2,,
+40,Mutation score evaluation in terms of object-oriented metrics,M. H. Moghadam; S. M. Babamir,2014,ICCKE,String C,EXCLUDE,IC2,,
+41,Control Oriented Mutation Testing for Detection of Potential Software Bugs,M. B. Bashir; A. Nadeem,2012,FIT,String C,EXCLUDE,IC2,,
+42,A weak mutation testing framework for WS-BPEL,P. Boonyakulsrirung; T. Suwannasart,2011,JCSSE,String C,EXCLUDE,IC2,,
+43,On the Improvement of the Mutation Score Using Distinguishing Test Cases,S. Nica,2011,ICST,String C,EXCLUDE,IC2,,
+44,Scalability Studies on Selective Mutation Testing,J. Zhang,2015,ICSE,String C,EXCLUDE,IC2,,
+45,A Solution For Improving The Effectiveness of Higher Order Mutation Testing,D. Van Nho et al.,2019,RIVF,String C,EXCLUDE,EC4,,
+46,An Empirical Study on the Scalability of Selective Mutation Testing,J. Zhang et al.,2014,ISSRE,String C,EXCLUDE,IC2,,
+47,Toward a Functional Requirements Prioritization with Early Mutation Testing,N. Condori-Fernandez et al.,2018,RET,String C,EXCLUDE,EC4,,
+48,Priority Path for Mutant Repairs on Mutation Testing,S. A. Arnomo; N. Binti Ibrahim,2019,ICAITI,String C,EXCLUDE,EC4,,
+49,Extreme mutation testing in practice: An industrial case study,M. Betka; S. Wagner,2021,AST,String C,EXCLUDE,EC4,,
+50,Improving Effectiveness of Spectrum-based Software Fault Localization using Mutation Testing,A. Saxena et al.,2021,INCET,String C,EXCLUDE,EC4,,
+51,Investigating the Correlation between Mutation Score and Coverage Score,B. Assylbekov et al.,2013,UKSim,String C,EXCLUDE,IC2,,
+52,"MILU: A Customizable, Runtime-Optimized Higher Order Mutation Testing Tool for the Full C Language",Y. Jia; M. Harman,2008,TAIC PART,String C,EXCLUDE,IC2,,
+53,Bacterio: Java mutation testing tool: A framework to evaluate quality of tests cases,P. R. Mateo; M. P. Usaola,2012,ICSM,String C,EXCLUDE,IC2,,
+54,Automatic Test Case Generation and Optimization Based on Mutation Testing,Y. Du et al.,2019,QRS-C,String C,EXCLUDE,EC4,,
+55,An Empirical Study on Mutation Testing of WS-BPEL Programs,C.-a. Sun et al.,2017,The Computer Journal,String C,EXCLUDE,IC2,,
+56,Extended firm mutation testing: A cost reduction technique for mutation testing,M. Singh; V. M. Srivastava,2017,ICIIP,String C,EXCLUDE,IC2,,
+57,An approach for mutation testing using elitist genetic algorithm,K. K. Mishra et al.,2010,ICCSIT,String C,EXCLUDE,IC2,,
+58,Mutation testing meets approximate computing,M. Gligoric et al.,2017,ICSE-NIER,String C,EXCLUDE,IC2,,
+59,Mutation testing for integer overflow in ethereum smart contracts,J. Sun et al.,2022,Tsinghua Science and Technology,String C,EXCLUDE,EC4,,
+60,A comparison of database fault detection capabilities using mutation testing,D. W. McCormick et al.,2012,ESEM,String C,EXCLUDE,IC2,,
+61,Testing DOM-utilizing functionalities through mutation testing,D. Pozderac et al.,2024,INFOTEH,String C,EXCLUDE,EC4,,
