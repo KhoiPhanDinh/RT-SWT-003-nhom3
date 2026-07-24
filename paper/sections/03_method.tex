@@ -1,0 +1,68 @@
+\section{Methodology}
+\subsection{Dataset}
+
+Source and reason: Our experiment uses Defects4J \cite{just2014defects4j} (\url{https://github.com/rjust/defects4j}) - a public Java benchmark containing real bugs with included test suites, which appears in almost every recent mutation testing study \cite{jimenez2018naturalness, kim2022seshat, zhao2024soda, tanhaei2025gemllm, wang2025comprehensive}, ensuring reproducibility and comparability with prior work.
+
+Projects and range: Three projects across three different domains are used to increase external validity: Commons Codec (encoding/phonetic algorithms: Base64, DoubleMetaphone, Caverphone...), Commons CSV (CSV parsing: CSVParser, CSVPrinter, CSVFormat...), and JacksonCore (JSON parsing: UTF8StreamJsonParser, ReaderBasedJsonParser, TextBuffer...). Each project has 10 buggy versions (1f-10f).
+
+Mutant pool: PIT \cite{coles2016pit} (pitest 1.15.8, default mutator set: NegateConditionals, Math, ConditionalsBoundary, VoidMethodCall, ReturnVals...) generates mutants on the classes affected by Defects4J. Final result: Codec 2,317, CSV 603, JacksonCore 8,120 - a total of 11,040 mutants across 20 classes, creating 37 (project, version, class) groups used as the pairing unit.
+
+Ground truth: The status of each mutant (KILLED / SURVIVED / NO\_COVERAGE / TIMED\_OUT / NON\_VIABLE) is determined by PIT when running the developer's original test suite - completely automated, with no manual labeling step, so inter-annotator agreement does not apply. Descriptive statistics: the overall pool KILLED rate is 84.9\% for Codec (1,966/2,317), 63.2\% for CSV (381/603), and 62.2\% for JacksonCore (5,047/8,120); the NO\_COVERAGE rates are 1.3\%, 6.6\%, and 24.4\%, respectively.
+
+Data issue detected and fixed (transparently recorded): On the first PIT run, Codec returned 100\% NO\_COVERAGE (0/2,317 killed), uniformly across all 10 versions. Diagnosis showed that Defects4J's tests ran cleanly (Failing tests: 0), but PIT reported "could not run any tests ... a recent version of JUnit 4 must be on the classpath": Codec's old test version only included JUnit 3.8.x, while PIT requires JUnit 4 to run them through JUnit38ClassRunner. After adding junit 4.13.2 + hamcrest-core 1.3 at the beginning of the classpath and rerunning via the PIT command-line, Codec produced a normal result (84.9\% killed), independently verified on version 1f before running all 10. CSV's and JacksonCore's ground truths were confirmed to be constant byte-for-byte; the broken results are saved as evidence. Following this issue, an auto-guard was added to the pipeline: it fails if any project has 0 mutants KILLED or $>50\%$ NO\_COVERAGE. Details are in amendment\_v1.2.md.
+
+\subsection{Experimental Setup and Pipeline}
+Model: We use GPT-4o-mini through the OpenAI Chat Completions API; the actual model version returned by the API is GPT-4o-mini-2024-07-18 \cite{openai2024gpt4omini}. Configuration: temperature = 0, batch of 8 mutants/request, maximum of 4 retries with exponential backoff; checkpoints are recorded after each successful batch to withstand network outages/session terminations (resuming does not lose data and does not re-call already-processed mutants).
+
+Prompt: The ranking prompt is kept fixed for the entire experiment (quoted verbatim - in LaTeX it is included as:
+\begin{lstlisting}
+You are ranking Java PIT mutants for mutation testing.
+
+For each mutant, assign:
+- score: integer from 1 to 5
+  5 = highly valuable mutant, likely semantically meaningful and useful for testing
+  4 = useful mutant
+  3 = moderate mutant
+  2 = weak mutant
+  1 = low-value or trivial mutant
+- confidence: integer from 1 to 5
+- rationale: short reason, maximum 18 words
+
+Return JSON array only.
+Each object must contain:
+mutant_id, score, confidence, rationale
+\end{lstlisting}
+
+\textbf{Pipeline.}
+The process consists of five steps:
+
+\begin{enumerate}
+\item \textbf{Validate mutant pool} — checked the schema and completeness of full\_sample.csv (result: 11,040 rows, status: VALID).
+\item \textbf{GPT ranking} — grouped mutants into batches of 8 and called the API; each mutant received a usefulness\_score from 1 to 5 along with confidence and rationale. All 11,040 mutants were scored across 1,380 API calls. Score distribution: score 1: 20 mutants, score 2: 925, score 3: 3,114, score 4: 5,573, score 5: 2,018.
+\item \textbf{Random} - random selection with random\_seed = 42. Seeds for each group were derived using hashlib.sha256 instead of Python's built-in hash(), because hash() is randomly salted per process, which breaks reproducibility.
+\item \textbf{Selection under budget} — both branches select the top 10\% of mutants in each group (project, version, class\_name). Selection by group instead of from the entire pool is compulsory: since the score has only 5 levels, this leads to many ties - the overall selection resulted in 3 out of 37 groups where no GPT-selected mutants were chosen, causing the budgets for the two branches to mismatch. Each branch selects 1,119 mutants (10.14\% of the pool); the 10\% budget allocation is consistent with the operating point that AL-PMT shows is sufficient to achieve near-maximum performance.
+\item \textbf{Metric computation} — calculate the mutation score for each branch within each group, pair them up, and run the tests (Section C, D).
+\end{enumerate}
+
+Handling edge cases: Each response is checked to ensure it contains all the required mutant\_ids; if the model skips any ID, the batch is marked and not allowed to checkpoint. The entire experiment had 3/10,053 faulty batches (0.03\%), all three cases due to the model returning a missing mutant\_id. The pipeline records a checkpoint after each successful batch, and when rerun, it only processes mutants that have not yet been checkpointed, so the three faulty batches were rechecked in the next run. Final result: 50,694/50,694 mutants (100\%) had valid points, with none of the mutants eliminated. The actual API cost, measured from tokens, was 3.57 USD for the entire experiment (14,314,218 prompt tokens, 2,368,824 completion tokens).
+
+Deviation from the proposal: Batch sizes varied across all runs: 9,959 batches used 5 mutants/call (representing 98.1\% of mutants), 90 batches used 10, and 3 batches used 25. Because mutants within the same batch appear in the same prompt, batch size can affect the assigned scores; this effect is discussed in Section~VI.
+
+Replication package: Our replication package, including datasets, prompts, scripts, and raw results, is publicly available at: \url{https://github.com/KhoiPhanDinh/RT-SWT-003-nhom3}.
+
+\subsection{Metrics}
+
+Mutation Score (MS) is the main metric: the proportion of mutants in the selected mutant set that are detected by the test suite: $MS = Killed/Selected$ \cite{jimenez2018naturalness} - the rate at which selected mutants are killed by the test suite. We use two deliberate levels: (a) per-group (each group has a value, used for paired comparison - the pre-registered unit); (b) overall/pooled (merging all selected mutants - reflecting the overall final user experience). Section IV will show that these two levels do not tell the same story, and that is itself a finding.
+
+The practical effectiveness threshold: effect size rank-biserial r\_rb with a success threshold of $\geq 0.30$ (medium according to Cohen \cite{cohen1988statistical}). This threshold is not arbitrary: Jimenez et al. showed that a small effect of $A_{12} \approx 0.57$ is not practical enough for mutant selection \cite{jimenez2018naturalness}, so a successful claim must exceed that threshold.
+
+Tools: pitest 1.15.8 \cite{coles2016pit} for mutation; scipy 1.18 for Wilcoxon; pandas for data processing; all versions are recorded in requirements.txt.
+
+\subsection{Statistical Analysis Plan}
+Pre-registered test: Wilcoxon one-sided signed-rank test (H1: $MS\_GPT > MS\_random$), paired by (project, version, class), $\alpha = 0.05$. Reason: the data are paired according to the design, the MS distribution cannot be assumed to be normal, and this is the standard recommendation for evaluating algorithms with a random element in SE according to Arcuri and Briand \cite{arcuri2011practical}; it also reuses the design of Jimenez et al. \cite{jimenez2018naturalness} to make the results comparable.
+
+Effect size: Matched-pairs rank-biserial r\_rb; interpretation $<0.2$ small / 0.2–0.5 medium / $>0.5$ large \cite{cohen1988statistical}.
+
+Original pre-registered criteria and amendment: original criteria: $p<0.05$ and $r\_rb \geq 0.30$ and $median(\Delta MS)>0$. During analysis, the median criterion revealed a structural flaw: the selection size for each group k ranged from 1 to 173, making small groups' MS values roughly quantized ($k=1 \rightarrow MS \in \{0,1\}$, $k=2 \rightarrow \text{step }\ 0{,}5$) consequently, 11/37 pairs were absolute ties ($\Delta MS=0$), and the entire sample median was mathematically pinned to 0 regardless of the direction of the effect - while the median of the non-zero pairs was +0.082. In other words, this criterion failed to measure what it was intended to measure on data with a skewed group structure. We removed the median criterion (keeping the p and r\_rb thresholds) and recorded this as an approved amendment - this is a pitfall in the evaluation unit that was warned about in the PMT literature \cite{delgadoperez2026pitfalls}, and \S4 reports both the original and amended results.
+
+Subgroup analysis (pre-registered): analysis by project; if $n\_group < 10$, only descriptive statistics are reported, and no separate test is run.
